@@ -23,7 +23,7 @@ const NavBar = () => {
               <Link to="all-supplies">All Supplies</Link>
             </li>
             <li>
-              <Link to="dashboardLayout">Dashboard</Link>
+              <Link to="dashboard">Dashboard</Link>
             </li>
             <li>
               <button className="border-2 border-[#FFB606] px-6 py-2 rounded-lg">
