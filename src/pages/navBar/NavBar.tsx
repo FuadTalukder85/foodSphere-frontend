@@ -5,10 +5,10 @@ import { IoMenu } from "react-icons/io5";
 const NavBar = () => {
   return (
     <Container>
-      <div className="navbar pt-4">
+      <div className="navbar">
         <div className="navbar-start flex justify-between">
           <p>
-            <span className="text-3xl font-bold text-[#00715D]">
+            <span className="text-4xl font-bold text-[#00715D]">
               Food<span className="text-[#e7c14d]">Sphere</span>
             </span>
           </p>
