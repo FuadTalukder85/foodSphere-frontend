@@ -9,7 +9,7 @@ const NavBar = () => {
         <div className="navbar-start flex justify-between">
           <p>
             <span className="text-4xl font-bold text-[#00715D]">
-              Food<span className="text-[#e7c14d]">Sphere</span>
+              Food<span className="text-[#FFB606]">Sphere</span>
             </span>
           </p>
         </div>
@@ -26,7 +26,7 @@ const NavBar = () => {
               <Link to="dashboardLayout">Dashboard</Link>
             </li>
             <li>
-              <button className="border-2 border-[#e7c14d] px-6 py-2 rounded-lg">
+              <button className="border-2 border-[#FFB606] px-6 py-2 rounded-lg">
                 <Link to="dashboardLayout">Login</Link>
               </button>
             </li>

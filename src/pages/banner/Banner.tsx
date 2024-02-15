@@ -12,10 +12,10 @@ const Banner = () => {
             Your Help Turn Into Smiles.
           </p>
           <div className="flex gap-5 justify-center mt-3">
-            <button className="bg-[#e7c14d] px-6 py-2 rounded-lg mt-6 font-bold">
+            <button className="bg-[#FFB606] px-6 py-2 rounded-lg mt-6 font-bold">
               Donate Now
             </button>
-            <button className="bg-[#e7c14d] px-6 py-2 rounded-lg mt-6 font-bold">
+            <button className="bg-[#FFB606] px-6 py-2 rounded-lg mt-6 font-bold">
               Learn More
             </button>
           </div>
