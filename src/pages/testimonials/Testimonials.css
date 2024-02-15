@@ -1,0 +1,19 @@
+.tesi-banner {
+  background-image: url(../../assets//img/testimonialimg/tesiBanner.png);
+  background-size: cover;
+}
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  margin-right: 25px;
+  color: white;
+  background: #ffb606;
+  padding: 35px;
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next:after {
+  margin-left: 25px;
+  color: white;
+  background: #ffb606;
+  padding: 35px;
+}
