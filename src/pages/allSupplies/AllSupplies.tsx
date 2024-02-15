@@ -6,7 +6,7 @@ const AllSupplies = () => {
   return (
     <Container>
       <div className="mt-28">
-        <h1 className="text-4xl text-[#00715D] font-semibold text-center">
+        <h1 className="text-4xl text-[#00715D] font-semibold text-center uppercase">
           Our All <span className="text-[#FFB606]">Supply</span>
         </h1>
         <p className="text-center mt-2 font-semibold text-[#00715D]">
@@ -17,7 +17,7 @@ const AllSupplies = () => {
       <div className="grid grid-cols-12 gap-7 mt-14">
         <div className="col-span-4 border border-[#FFB606] mx-auto p-7">
           <img
-            className="border border-x-slate-50 border-[#FFB606] shadow-2xl"
+            className="border border-y-[#FFB606] shadow-2xl"
             src={foodImg}
             alt=""
           />
@@ -25,7 +25,7 @@ const AllSupplies = () => {
             <h3 className="text-[#FFB606] text-2xl font-semibold text-center">
               Charity For Food
             </h3>
-            <p className="mt-2 text-center text-[#00715D]">
+            <p className="mt-2 text-center font-medium text-[#00715D]">
               This level of development and supervision is for individuals who
               can't live without anyone else's input yet who.
             </p>
@@ -49,7 +49,7 @@ const AllSupplies = () => {
         </div>
         <div className="col-span-4 border border-[#FFB606] mx-auto p-7">
           <img
-            className="border border-x-slate-50 border-[#FFB606] shadow-2xl"
+            className="border border-y-[#FFB606] shadow-2xl"
             src={foodImg}
             alt=""
           />
@@ -57,7 +57,7 @@ const AllSupplies = () => {
             <h3 className="text-[#FFB606] text-2xl font-semibold text-center">
               Charity For Food
             </h3>
-            <p className="mt-2 text-center text-[#00715D]">
+            <p className="mt-2 text-center font-medium text-[#00715D]">
               This level of development and supervision is for individuals who
               can't live without anyone else's input yet who.
             </p>
@@ -81,7 +81,7 @@ const AllSupplies = () => {
         </div>
         <div className="col-span-4 border border-[#FFB606] mx-auto p-7">
           <img
-            className="border border-x-slate-50 border-[#FFB606] shadow-2xl"
+            className="border border-y-[#FFB606] shadow-2xl"
             src={foodImg}
             alt=""
           />
@@ -89,7 +89,7 @@ const AllSupplies = () => {
             <h3 className="text-[#FFB606] text-2xl font-semibold text-center">
               Charity For Food
             </h3>
-            <p className="mt-2 text-center text-[#00715D]">
+            <p className="mt-2 text-center font-medium text-[#00715D]">
               This level of development and supervision is for individuals who
               can't live without anyone else's input yet who.
             </p>
@@ -113,7 +113,7 @@ const AllSupplies = () => {
         </div>
         <div className="col-span-4 border border-[#FFB606] mx-auto p-7">
           <img
-            className="border border-x-slate-50 border-[#FFB606] shadow-2xl"
+            className="border border-y-[#FFB606] shadow-2xl"
             src={foodImg}
             alt=""
           />
@@ -121,7 +121,7 @@ const AllSupplies = () => {
             <h3 className="text-[#FFB606] text-2xl font-semibold text-center">
               Charity For Food
             </h3>
-            <p className="mt-2 text-center text-[#00715D]">
+            <p className="mt-2 text-center font-medium text-[#00715D]">
               This level of development and supervision is for individuals who
               can't live without anyone else's input yet who.
             </p>
@@ -145,7 +145,7 @@ const AllSupplies = () => {
         </div>
         <div className="col-span-4 border border-[#FFB606] mx-auto p-7">
           <img
-            className="border border-x-slate-50 border-[#FFB606] shadow-2xl"
+            className="border border-y-[#FFB606] shadow-2xl"
             src={foodImg}
             alt=""
           />
@@ -153,7 +153,7 @@ const AllSupplies = () => {
             <h3 className="text-[#FFB606] text-2xl font-semibold text-center">
               Charity For Food
             </h3>
-            <p className="mt-2 text-center text-[#00715D]">
+            <p className="mt-2 text-center font-medium text-[#00715D]">
               This level of development and supervision is for individuals who
               can't live without anyone else's input yet who.
             </p>
@@ -177,7 +177,7 @@ const AllSupplies = () => {
         </div>
         <div className="col-span-4 border border-[#FFB606] mx-auto p-7">
           <img
-            className="border border-x-slate-50 border-[#FFB606] shadow-2xl"
+            className="border border-y-[#FFB606] shadow-2xl"
             src={foodImg}
             alt=""
           />
@@ -185,7 +185,7 @@ const AllSupplies = () => {
             <h3 className="text-[#FFB606] text-2xl font-semibold text-center">
               Charity For Food
             </h3>
-            <p className="mt-2 text-center text-[#00715D]">
+            <p className="mt-2 text-center font-medium text-[#00715D]">
               This level of development and supervision is for individuals who
               can't live without anyone else's input yet who.
             </p>
