@@ -1,8 +1,14 @@
 import { FaRegEdit } from "react-icons/fa";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import useSupply from "../../../hooks/useSupply";
 
 const SuppliesTable = () => {
+  const { data, isLoading } = useSupply();
+  console.log("Supply data => ", data);
+  if (isLoading) {
+    return <></>;
+  }
   return (
     <div>
       <div className="flex justify-between items-center">
@@ -30,46 +36,25 @@ const SuppliesTable = () => {
           </thead>
           <tbody>
             {/* row 1 */}
-            <tr className="text-[#1E2436] font-semibold text-lg">
-              <th>2</th>
-              <td>Charity For Food</td>
-              <td>Rice</td>
-              <td>12kg</td>
-              <td className="text-[#FFB606] text-4xl flex justify-center">
-                <Link to="/dashboard/edit-supply">
-                  <FaRegEdit></FaRegEdit>
-                </Link>
-              </td>
-              <td className="text-red-600 text-4xl">
-                <RiDeleteBin5Line></RiDeleteBin5Line>
-              </td>
-            </tr>
-            {/* row 2 */}
-            <tr className="text-[#00715D] font-semibold text-lg">
-              <th>3</th>
-              <td>Charity For Food</td>
-              <td>Rice</td>
-              <td>12kg</td>
-              <td className="text-[#FFB606] text-4xl">
-                <FaRegEdit></FaRegEdit>
-              </td>
-              <td className="text-red-600 text-4xl">
-                <RiDeleteBin5Line></RiDeleteBin5Line>
-              </td>
-            </tr>
-            {/* row 3 */}
-            <tr className="text-[#00715D] font-semibold text-lg">
-              <th>4</th>
-              <td>Charity For Food</td>
-              <td>Rice</td>
-              <td>12kg</td>
-              <td className="text-[#FFB606] text-4xl">
-                <FaRegEdit></FaRegEdit>
-              </td>
-              <td className="text-red-600 text-4xl">
-                <RiDeleteBin5Line></RiDeleteBin5Line>
-              </td>
-            </tr>
+            {data.map((supplyItem, index) => (
+              <tr
+                key={supplyItem._id}
+                className="text-[#1E2436] font-semibold text-lg"
+              >
+                <th>{index + 1}</th>
+                <td>{supplyItem.title}</td>
+                <td>{supplyItem.category}</td>
+                <td>{supplyItem.quantity}</td>
+                <td className="text-[#FFB606] text-4xl flex justify-center">
+                  <Link to="/dashboard/edit-supply">
+                    <FaRegEdit></FaRegEdit>
+                  </Link>
+                </td>
+                <td className="text-red-600 text-4xl">
+                  <RiDeleteBin5Line></RiDeleteBin5Line>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
