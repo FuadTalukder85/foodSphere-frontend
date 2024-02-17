@@ -1,16 +1,19 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "./sidebar/Sidebar";
+import Container from "../components/container/Container";
 
 const Dashboard = () => {
   return (
-    <div className="grid grid-cols-12 gap-10">
-      <div className="col-span-2">
-        <Sidebar></Sidebar>
+    <Container>
+      <div className="grid grid-cols-12 gap-10">
+        <div className="col-span-3">
+          <Sidebar></Sidebar>
+        </div>
+        <div className="col-span-9">
+          <Outlet></Outlet>
+        </div>
       </div>
-      <div className="col-span-10">
-        <Outlet></Outlet>
-      </div>
-    </div>
+    </Container>
   );
 };
 

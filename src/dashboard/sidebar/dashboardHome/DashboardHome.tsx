@@ -1,9 +1,7 @@
-import SupplyTable from "../../supplyTable/SupplyTable";
-
 const DashboardHome = () => {
   return (
     <div>
-      <SupplyTable></SupplyTable>
+      <h1>This is dashboard home</h1>
     </div>
   );
 };
