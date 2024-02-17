@@ -1,29 +1,33 @@
-import { FormEvent, useState } from "react";
+import { useForm, SubmitHandler } from "react-hook-form";
 import { useAppDispatch } from "../../redux/Hook";
+import Swal from "sweetalert2";
 import { addSupply } from "../../redux/features/SupplySlice";
 
 const AddSupplies = () => {
-  const [image, setImage] = useState("");
-  const [category, setCategory] = useState("");
-  const [title, setTitle] = useState("");
-  const [quantity, setQuantity] = useState("");
-  const [description, setDescription] = useState("");
-
+  const { register, handleSubmit, reset } = useForm();
   const dispatch = useAppDispatch();
-
-  const onSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted");
-    console.log(image, category, title, quantity, description);
-    const supplyDetails = {
-      images: image,
-      categorys: category,
-      titles: title,
-      quantitys: quantity,
-      descriptions: description,
-    };
-
-    dispatch(addSupply(supplyDetails));
+  const onSubmit: SubmitHandler = (data) => {
+    fetch("http://localhost:5000/create-supply", {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Supply has been saved",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        dispatch(addSupply(data));
+        reset();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
@@ -34,7 +38,7 @@ const AddSupplies = () => {
             <h1 className="text-center text-2xl font-bold text-white bg-[#FFB606] rounded-t-lg p-1">
               Add Supply
             </h1>
-            <form onSubmit={onSubmit} className="card-body p-10">
+            <form onSubmit={handleSubmit(onSubmit)} className="card-body p-10">
               {/* img */}
               <div className="form-control mt-3">
                 <label htmlFor="image" className="label">
@@ -43,9 +47,7 @@ const AddSupplies = () => {
                   </span>
                 </label>
                 <input
-                  onBlur={(e) => setImage(e.target.value)}
-                  id="image"
-                  type="text"
+                  {...register("image")}
                   placeholder="image here"
                   className="w-full bg-white border py-1 px-3"
                 />
@@ -58,9 +60,7 @@ const AddSupplies = () => {
                   </span>
                 </label>
                 <input
-                  onBlur={(e) => setCategory(e.target.value)}
-                  id="category"
-                  type="text"
+                  {...register("category")}
                   placeholder="category type here"
                   className="w-full bg-white border py-1 px-3"
                 />
@@ -73,9 +73,7 @@ const AddSupplies = () => {
                   </span>
                 </label>
                 <input
-                  onBlur={(e) => setTitle(e.target.value)}
-                  id="title"
-                  type="text"
+                  {...register("title")}
                   placeholder="title type here"
                   className="w-full bg-white border py-1 px-3"
                 />
@@ -88,9 +86,7 @@ const AddSupplies = () => {
                   </span>
                 </label>
                 <input
-                  onBlur={(e) => setQuantity(e.target.value)}
-                  id="quantity"
-                  type="text"
+                  {...register("quantity")}
                   placeholder="quantity type here"
                   className="w-full bg-white border py-1 px-3"
                 />
@@ -104,8 +100,7 @@ const AddSupplies = () => {
                   </span>
                 </label>
                 <textarea
-                  onBlur={(e) => setDescription(e.target.value)}
-                  id="description"
+                  {...register("description")}
                   placeholder="description type here"
                   className="w-full py-1 px-3 bg-white"
                 ></textarea>

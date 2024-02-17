@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
 import Home from "../../pages/home/Home";
 import Dashboard from "../../dashboard/Dashboard";
-import DashboardHome from "../../dashboard/sidebar/dashboardHome/DashboardHome";
+import DashboardHome from "../../dashboard/dashboardHome/DashboardHome";
 import SuppliesTable from "../../dashboard/supplies/supplyTable/SuppliesTable";
 import AddSupplies from "../../dashboard/supplies/AddSupplies";
 import EditSupply from "../../dashboard/supplies/EditSupply";
