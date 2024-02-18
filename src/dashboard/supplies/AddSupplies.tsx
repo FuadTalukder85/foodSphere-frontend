@@ -6,6 +6,7 @@ import { addSupply } from "../../redux/features/SupplySlice";
 const AddSupplies = () => {
   const { register, handleSubmit, reset } = useForm();
   const dispatch = useAppDispatch();
+
   const onSubmit: SubmitHandler = (data) => {
     fetch("http://localhost:5000/create-supply", {
       method: "POST",

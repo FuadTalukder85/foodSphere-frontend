@@ -16,7 +16,27 @@ export const baseApi = createApi({
         method: "DELETE",
       }),
     }),
+    // postSupply: builder.mutation({
+    //   query: (postSupply) => ({
+    //     url: "/all-supplies",
+    //     method: "POST",
+    //     body: postSupply,
+    //   }),
+    // }),
+    updateSupply: builder.mutation({
+      query: (updateSupplyData) => ({
+        url: "/all-supplies",
+        method: "PUT",
+        body: updateSupplyData,
+      }),
+      // invalidatesTags: ["supply"],
+    }),
   }),
 });
 
-export const { useGetSuppliesQuery, useDeleteSupplyMutation } = baseApi;
+export const {
+  useGetSuppliesQuery,
+  useDeleteSupplyMutation,
+  // usePostSupplyMutation,
+  useUpdateSupplyMutation,
+} = baseApi;
