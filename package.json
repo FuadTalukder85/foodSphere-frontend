@@ -13,6 +13,7 @@
     "@egjs/react-flicking": "^4.11.2",
     "@reduxjs/toolkit": "^2.2.1",
     "@tanstack/react-query": "^5.21.2",
+    "js-cookie": "^3.0.5",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
     "react": "^18.2.0",
@@ -26,6 +27,7 @@
     "swiper": "^11.0.6"
   },
   "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@typescript-eslint/eslint-plugin": "^6.14.0",

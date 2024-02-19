@@ -1,6 +1,27 @@
+import { Link } from "react-router-dom";
 import Container from "../../components/container/Container";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { useLoginUsersMutation } from "../../redux/features/auth/AuthApi";
+import { useAppDispatch } from "../../redux/Hook";
+import { setUser } from "../../redux/features/auth/AuthSlice";
+import Cookies from "js-cookie";
 
 const Login = () => {
+  const dispatch = useAppDispatch();
+  const { register, handleSubmit } = useForm();
+  const [loggedUser] = useLoginUsersMutation();
+  const onSubmit: SubmitHandler = async (data) => {
+    const userInfo = {
+      email: data.email,
+      password: data.password,
+    };
+    const res = await loggedUser(userInfo).unwrap();
+    const { token } = res;
+    dispatch(setUser({ user: {}, token: res.token }));
+    localStorage.setItem("token", token);
+    Cookies.set("refreshToken", token);
+    console.log(res);
+  };
   return (
     <Container>
       <div className="hero bg-base-200">
@@ -15,7 +36,7 @@ const Login = () => {
             </p>
           </div>
           <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
-            <form className="card-body">
+            <form onSubmit={handleSubmit(onSubmit)} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="text-[#00715D] font-bold">Email</span>
@@ -24,7 +45,7 @@ const Login = () => {
                   type="email"
                   placeholder="email"
                   className="input input-bordered"
-                  required
+                  {...register("email")}
                 />
               </div>
               <div className="form-control">
@@ -35,7 +56,7 @@ const Login = () => {
                   type="password"
                   placeholder="password"
                   className="input input-bordered"
-                  required
+                  {...register("password")}
                 />
                 <label className="label">
                   <a
@@ -52,12 +73,12 @@ const Login = () => {
                         Don't have and account?
                       </span>
                     </span>
-                    <a
+                    <Link
+                      to="/register"
                       className="text-[#FFB606] link font-bold ps-2"
-                      href="register"
                     >
                       please register
-                    </a>
+                    </Link>
                   </p>
                 </label>
               </div>
