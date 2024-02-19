@@ -1,9 +1,20 @@
 import Container from "../../components/container/Container";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useUsersMutation } from "../../redux/features/auth/AuthApi";
 
 const Register = () => {
   const { register, handleSubmit } = useForm();
-  const onSubmit: SubmitHandler = (data) => console.log(data);
+  const [users] = useUsersMutation();
+
+  const onSubmit: SubmitHandler = async (data) => {
+    try {
+      await users(data);
+    } catch (error) {
+      console.error("Registration failed:", error);
+    }
+
+    console.log(data);
+  };
   return (
     <Container>
       <div className="hero bg-base-200">
@@ -65,7 +76,7 @@ const Register = () => {
                   type="submit"
                   className="btn btn-primary bg-[#FFB606] border-none text-white tracking-widest font-bold"
                 >
-                  Login
+                  Register
                 </button>
               </div>
             </form>

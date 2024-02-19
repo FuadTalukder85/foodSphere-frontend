@@ -4,6 +4,13 @@ export const baseApi = createApi({
   reducerPath: "baseApi",
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000" }),
   endpoints: (builder) => ({
+    // users: builder.mutation({
+    //   query: (users) => ({
+    //     url: "/api/v1/register",
+    //     method: "POST",
+    //     body: users,
+    //   }),
+    // }),
     getSupplies: builder.query({
       query: () => ({
         url: "/all-supplies",
@@ -35,6 +42,7 @@ export const baseApi = createApi({
 });
 
 export const {
+  // useUsersMutation,
   useGetSuppliesQuery,
   useDeleteSupplyMutation,
   // usePostSupplyMutation,
