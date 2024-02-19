@@ -6,6 +6,8 @@ import DashboardHome from "../../dashboard/dashboardHome/DashboardHome";
 import SuppliesTable from "../../dashboard/supplies/supplyTable/SuppliesTable";
 import AddSupplies from "../../dashboard/supplies/AddSupplies";
 import EditSupply from "../../dashboard/supplies/EditSupply";
+import Register from "../../pages/form/Register";
+import Login from "../../pages/form/Login";
 
 export const router = createBrowserRouter([
   {
@@ -15,6 +17,14 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "login",
+        element: <Login></Login>,
+      },
+      {
+        path: "register",
+        element: <Register></Register>,
       },
     ],
   },

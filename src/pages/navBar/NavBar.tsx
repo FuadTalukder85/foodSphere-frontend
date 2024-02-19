@@ -27,7 +27,7 @@ const NavBar = () => {
             </li>
             <li>
               <button className="border-2 border-[#FFB606] px-6 py-2 rounded-lg">
-                <Link to="dashboardLayout">Login</Link>
+                <Link to="login">Login</Link>
               </button>
             </li>
           </ul>
