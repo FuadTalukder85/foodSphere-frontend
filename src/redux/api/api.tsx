@@ -20,6 +20,12 @@ export const baseApi = createApi({
         method: "GET",
       }),
     }),
+    // getSupplyById: builder.query({
+    //   query: () => ({
+    //     url: `/all-supplies/${_id}`,
+    //     method: "GET",
+    //   }),
+    // }),
     deleteSupply: builder.mutation({
       query: (_id) => ({
         url: `/all-supplies/${_id}`,
@@ -47,6 +53,7 @@ export const baseApi = createApi({
 export const {
   // useUsersMutation,
   useGetSuppliesQuery,
+  // useGetSupplyByIdQuery,
   useDeleteSupplyMutation,
   // usePostSupplyMutation,
   useUpdateSupplyMutation,

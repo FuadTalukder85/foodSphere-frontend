@@ -9,6 +9,7 @@ import EditSupply from "../../dashboard/supplies/EditSupply";
 import Register from "../../pages/form/Register";
 import Login from "../../pages/form/Login";
 import ProtectedRoute from "../layout/ProtectedRoute";
+import AllSupplies from "../../pages/allSupplies/AllSupplies";
 
 export const router = createBrowserRouter([
   {
@@ -18,6 +19,12 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "supplies",
+        element: <AllSupplies></AllSupplies>,
+        // loader: ({ params }) =>
+        //   fetch(`http://localhost:5000/all-supplies/${params.id}`),
       },
       {
         path: "login",

@@ -29,7 +29,7 @@ const NavBar = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="all-supplies">All Supplies</Link>
+              <Link to="supplies">All Supplies</Link>
             </li>
             <li>{user ? <Link to="dashboard">Dashboard</Link> : ""}</li>
             <li>
