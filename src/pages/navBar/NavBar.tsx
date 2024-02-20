@@ -1,8 +1,17 @@
 import Container from "../../components/container/Container";
 import { Link } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
+import { useAppDispatch, useAppSelector } from "../../redux/Hook";
+import { logout, useCurrentUser } from "../../redux/features/auth/AuthSlice";
 
 const NavBar = () => {
+  const dispatch = useAppDispatch();
+  const user = useAppSelector(useCurrentUser);
+
+  const handleLogout = () => {
+    dispatch(logout());
+  };
+
   return (
     <Container>
       <div className="navbar">
@@ -22,13 +31,20 @@ const NavBar = () => {
             <li>
               <Link to="all-supplies">All Supplies</Link>
             </li>
+            <li>{user ? <Link to="dashboard">Dashboard</Link> : ""}</li>
             <li>
-              <Link to="dashboard">Dashboard</Link>
-            </li>
-            <li>
-              <button className="border-2 border-[#FFB606] px-6 py-2 rounded-lg">
-                <Link to="login">Login</Link>
-              </button>
+              {user ? (
+                <button
+                  onClick={handleLogout}
+                  className="border-2 border-[#FFB606] px-6 py-2 rounded-lg"
+                >
+                  Logout
+                </button>
+              ) : (
+                <button className="border-2 border-[#FFB606] px-6 py-2 rounded-lg">
+                  <Link to="login">Login</Link>
+                </button>
+              )}
             </li>
           </ul>
         </div>

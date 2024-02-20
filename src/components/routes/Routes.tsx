@@ -8,6 +8,7 @@ import AddSupplies from "../../dashboard/supplies/AddSupplies";
 import EditSupply from "../../dashboard/supplies/EditSupply";
 import Register from "../../pages/form/Register";
 import Login from "../../pages/form/Login";
+import ProtectedRoute from "../layout/ProtectedRoute";
 
 export const router = createBrowserRouter([
   {
@@ -30,7 +31,11 @@ export const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <Dashboard></Dashboard>,
+    element: (
+      <ProtectedRoute>
+        <Dashboard></Dashboard>
+      </ProtectedRoute>
+    ),
     children: [
       {
         path: "/dashboard",

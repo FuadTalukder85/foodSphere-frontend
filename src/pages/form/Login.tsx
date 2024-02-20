@@ -1,26 +1,39 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Container from "../../components/container/Container";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useLoginUsersMutation } from "../../redux/features/auth/AuthApi";
 import { useAppDispatch } from "../../redux/Hook";
 import { setUser } from "../../redux/features/auth/AuthSlice";
 import Cookies from "js-cookie";
+import { verifyToken } from "../../utils/VerifyToken";
 
 const Login = () => {
+  const location = useLocation();
+  const nagivate = useNavigate();
   const dispatch = useAppDispatch();
   const { register, handleSubmit } = useForm();
   const [loggedUser] = useLoginUsersMutation();
+
+  const { from } = location.state || { from: { pathname: "/" } };
+
   const onSubmit: SubmitHandler = async (data) => {
     const userInfo = {
       email: data.email,
       password: data.password,
     };
-    const res = await loggedUser(userInfo).unwrap();
-    const { token } = res;
-    dispatch(setUser({ user: {}, token: res.token }));
-    localStorage.setItem("token", token);
-    Cookies.set("refreshToken", token);
-    console.log(res);
+    try {
+      const res = await loggedUser(userInfo).unwrap();
+      const user = verifyToken(res.token);
+      console.log(user);
+      const { token } = res;
+      dispatch(setUser({ user: user, token: res.token }));
+      localStorage.setItem("token", token);
+      Cookies.set("refreshToken", token);
+      nagivate(from, { replace: true });
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <Container>
