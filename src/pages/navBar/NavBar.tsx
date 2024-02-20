@@ -15,7 +15,7 @@ const NavBar = () => {
   return (
     <Container>
       <div className="navbar">
-        <div className="navbar-start flex justify-between">
+        <div className="navbar-start md:flex justify-between">
           <p>
             <span className="text-4xl font-bold text-[#00715D]">
               Food<span className="text-[#FFB606]">Sphere</span>

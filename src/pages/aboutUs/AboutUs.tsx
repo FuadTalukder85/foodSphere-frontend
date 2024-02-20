@@ -4,14 +4,14 @@ import aboutUsImg from "../../assets/img/aboutUsImg/aboutUsImg.png";
 const AboutUs = () => {
   return (
     <Container>
-      <div className="mt-28">
+      <div className="mt-7 md:mt-28 px-7 md:px-0">
         <h1 className="text-4xl text-[#00715D] font-semibold">
           About Be <span className="text-[#FFB606]">FoodSphere</span>
         </h1>
       </div>
-      <div className="grid grid-cols-12 gap-10 items-center">
-        <div className="col-span-7">
-          <p className="mt-5">
+      <div className="grid md:grid-cols-12 gap-10 items-center p-5 md:p-0">
+        <div className="md:col-span-7">
+          <p className="md:mt-5">
             Be aHand Is a Most Charity/ Non-profit/ Fundraising/ NGO
             organizations. Now Be aHand Is a Biggest organizations In This
             Globe. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -38,7 +38,7 @@ const AboutUs = () => {
             Read More
           </button>
         </div>
-        <div className="col-span-5">
+        <div className="md:col-span-5">
           <img src={aboutUsImg} alt="" />
         </div>
       </div>

@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div className="bg-[#1E2436] text-white mt-10">
       <Container>
-        <footer className="footer grid grid-cols-12 gap-10 text-white py-16">
+        <footer className="footer grid md:grid-cols-12 gap-10 text-white py-16">
           <aside className="col-span-4">
             <p>
               <span className="text-3xl font-bold">

@@ -4,7 +4,7 @@ import recentCauseImg1 from "../../assets/img/recentCauses/1.jpg";
 const RecentCauses = () => {
   return (
     <Container>
-      <div className="mt-24">
+      <div className="mt-7 md:mt-24">
         <h1 className="text-4xl text-[#00715D] font-semibold text-center uppercase">
           Recent <span className="text-[#FFB606]">Causes</span>
         </h1>
@@ -13,15 +13,15 @@ const RecentCauses = () => {
           those who need it!
         </p>
       </div>
-      <div className="grid grid-cols-4 gap-5 mt-14">
-        <div>
+      <div className="grid md:grid-cols-4 gap-5 mt-5 md:mt-14">
+        <div className="">
           <img
             className="border-b-2 border-[#FFB606]"
             src={recentCauseImg1}
             alt=""
           />
-          <div className="pe-3">
-            <div className="font-semibold mt-2 flex gap-5">
+          <div className="pe-3 text-center md:text-left">
+            <div className="font-semibold mt-2 flex justify-around gap-5">
               <div className="text-[#00715D]">
                 Goal: <span className="text-[#FFB606]">$5000</span>
               </div>

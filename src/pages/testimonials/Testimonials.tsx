@@ -16,7 +16,7 @@ const Testimonials = () => {
   return (
     <div className="tesi-banner">
       <Container>
-        <div className="mt-24 py-16">
+        <div className="mt-7 md:mt-24 md:py-16">
           <Swiper
             navigation={true}
             modules={[Navigation]}

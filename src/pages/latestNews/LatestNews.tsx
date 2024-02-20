@@ -13,7 +13,7 @@ const LatestNews = () => {
           those who need it!
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-5 mt-16">
+      <div className="grid md:grid-cols-3 gap-5 mt-16">
         <div>
           <img src={latestNewsImg1} alt="" />
           <div className="p-7">
