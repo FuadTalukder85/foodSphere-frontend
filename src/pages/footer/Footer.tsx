@@ -10,8 +10,8 @@ const Footer = () => {
   return (
     <div className="bg-[#1E2436] text-white mt-10">
       <Container>
-        <footer className="footer grid md:grid-cols-12 gap-10 text-white py-16">
-          <aside className="col-span-4">
+        <footer className="footer grid grid-cols-12 gap-10 text-white px-5 md:px-0 py-16">
+          <aside className="col-span-12 md:col-span-4">
             <p>
               <span className="text-3xl font-bold">
                 Food<span className="text-[#FFB606]">Sphere</span>
@@ -25,7 +25,7 @@ const Footer = () => {
               Donate Now
             </button>
           </aside>
-          <nav className="col-span-2">
+          <nav className="col-span-5 md:col-span-2">
             <h6 className="font-bold text-2xl text-[#FFB606]">Services</h6>
             <a className="link link-hover text-lg">Donate</a>
             <a className="link link-hover text-lg">Sponsor</a>
@@ -33,7 +33,7 @@ const Footer = () => {
             <a className="link link-hover text-lg">Volunteer</a>
             <a className="link link-hover text-lg">Partner</a>
           </nav>
-          <nav className="col-span-3">
+          <nav className="col-span-7 md:col-span-3">
             <h6 className="font-bold text-2xl text-[#FFB606]">Non profit</h6>
             <a className="link link-hover text-lg">Differently Abled Kids</a>
             <a className="link link-hover text-lg">Help Child Cancer</a>
@@ -41,7 +41,7 @@ const Footer = () => {
             <a className="link link-hover text-lg">Give them Education</a>
             <a className="link link-hover text-lg">Start a Fundraising</a>
           </nav>
-          <nav className="col-span-4">
+          <nav className="col-span-7 md:col-span-4">
             <h6 className="font-bold text-2xl text-[#FFB606]">Contact</h6>
             <p className="text-lg">
               380 Street Kilda Broklyn Road Melbourne Australia

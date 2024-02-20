@@ -4,16 +4,18 @@
 }
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
+  margin-top: 125px;
   margin-right: 25px;
   color: white;
   background: #ffb606;
-  padding: 35px;
+  padding: 25px;
 }
 
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next:after {
+  margin-top: 125px;
   margin-left: 25px;
   color: white;
   background: #ffb606;
-  padding: 35px;
+  padding: 25px;
 }

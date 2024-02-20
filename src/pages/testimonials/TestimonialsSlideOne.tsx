@@ -7,7 +7,7 @@ const TestimonialsSlideOne = () => {
         src={tesi_img1}
         alt=""
       />
-      <p className="mx-auto text-center max-w-[65ch] text-white mt-3">
+      <p className="mx-auto text-center md:max-w-[65ch] text-white mt-3">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ad,
         hic aliquam debitis quam commodi incidunt, eos suscipit doloremque
         nesciunt voluptatum quaerat! Repellendus impedit voluptatibus maxime

@@ -16,7 +16,7 @@ const RecentCauses = () => {
       <div className="grid md:grid-cols-4 gap-5 mt-5 md:mt-14">
         <div className="">
           <img
-            className="border-b-2 border-[#FFB606]"
+            className="border-b-2 mx-auto border-[#FFB606]"
             src={recentCauseImg1}
             alt=""
           />
@@ -29,7 +29,7 @@ const RecentCauses = () => {
                 Raised: <span className="text-[#FFB606]">$3000</span>
               </div>
             </div>
-            <h1 className="text-2xl text-[#FFB606] font-semibold">
+            <h1 className="text-2xl text-[#FFB606] font-semibold mt-3">
               Charity For Education
             </h1>
             <p className="text-[#00715D] mt-3">
@@ -41,14 +41,14 @@ const RecentCauses = () => {
             </button>
           </div>
         </div>
-        <div>
+        <div className="">
           <img
-            className="border-b-2 border-[#FFB606]"
+            className="border-b-2 mx-auto border-[#FFB606]"
             src={recentCauseImg1}
             alt=""
           />
-          <div className="pe-3">
-            <div className="font-semibold mt-2 flex gap-5">
+          <div className="pe-3 text-center md:text-left">
+            <div className="font-semibold mt-2 flex justify-around gap-5">
               <div className="text-[#00715D]">
                 Goal: <span className="text-[#FFB606]">$5000</span>
               </div>
@@ -56,7 +56,7 @@ const RecentCauses = () => {
                 Raised: <span className="text-[#FFB606]">$3000</span>
               </div>
             </div>
-            <h1 className="text-2xl text-[#FFB606] font-semibold">
+            <h1 className="text-2xl text-[#FFB606] font-semibold mt-3">
               Charity For Education
             </h1>
             <p className="text-[#00715D] mt-3">
@@ -68,14 +68,14 @@ const RecentCauses = () => {
             </button>
           </div>
         </div>
-        <div>
+        <div className="">
           <img
-            className="border-b-2 border-[#FFB606]"
+            className="border-b-2 mx-auto border-[#FFB606]"
             src={recentCauseImg1}
             alt=""
           />
-          <div className="pe-3">
-            <div className="font-semibold mt-2 flex gap-5">
+          <div className="pe-3 text-center md:text-left">
+            <div className="font-semibold mt-2 flex justify-around gap-5">
               <div className="text-[#00715D]">
                 Goal: <span className="text-[#FFB606]">$5000</span>
               </div>
@@ -83,7 +83,7 @@ const RecentCauses = () => {
                 Raised: <span className="text-[#FFB606]">$3000</span>
               </div>
             </div>
-            <h1 className="text-2xl text-[#FFB606] font-semibold">
+            <h1 className="text-2xl text-[#FFB606] font-semibold mt-3">
               Charity For Education
             </h1>
             <p className="text-[#00715D] mt-3">
@@ -95,14 +95,14 @@ const RecentCauses = () => {
             </button>
           </div>
         </div>
-        <div>
+        <div className="">
           <img
-            className="border-b-2 border-[#FFB606]"
+            className="border-b-2 mx-auto border-[#FFB606]"
             src={recentCauseImg1}
             alt=""
           />
-          <div className="pe-3">
-            <div className="font-semibold mt-2 flex gap-5">
+          <div className="pe-3 text-center md:text-left">
+            <div className="font-semibold mt-2 flex justify-around gap-5">
               <div className="text-[#00715D]">
                 Goal: <span className="text-[#FFB606]">$5000</span>
               </div>
@@ -110,7 +110,7 @@ const RecentCauses = () => {
                 Raised: <span className="text-[#FFB606]">$3000</span>
               </div>
             </div>
-            <h1 className="text-2xl text-[#FFB606] font-semibold">
+            <h1 className="text-2xl text-[#FFB606] font-semibold mt-3">
               Charity For Education
             </h1>
             <p className="text-[#00715D] mt-3">

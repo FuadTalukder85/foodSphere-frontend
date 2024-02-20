@@ -9,7 +9,7 @@ import galleryImg8 from "../../assets/img/galleryImg/8.jpg";
 
 const Gallery = () => {
   return (
-    <div className="mt-28">
+    <div className="mt-7 md:mt-28">
       <div>
         <h1 className="text-4xl text-[#00715D] font-semibold text-center">
           OUR PHOTO <span className="text-[#FFB606]">GALLERY</span>
@@ -19,7 +19,7 @@ const Gallery = () => {
           those who need it!
         </p>
       </div>
-      <div className="grid grid-cols-4 gap-5 mt-14">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-7 md:mt-14">
         <div>
           <img src={galleryImg1} alt="" />
         </div>

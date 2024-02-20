@@ -53,7 +53,7 @@ const NavBar = () => {
           <div
             tabIndex={0}
             role="button"
-            className="btn text-5xl btn-ghost lg:hidden text-[#0B63E5]"
+            className="btn text-5xl btn-ghost lg:hidden text-[#00715D]"
           >
             <IoMenu></IoMenu>
           </div>
@@ -62,19 +62,19 @@ const NavBar = () => {
             className="menu menu-sm dropdown-content mt-48 z-[1] p-2 shadow bg-slate-200 w-36"
           >
             <li>
-              <Link to="/" className="bg-[#0B63E5] text-white">
+              <Link to="/" className="bg-[#00715D] text-white">
                 Home
               </Link>
             </li>
             <li>
-              <Link to="all-supplies" className="bg-[#0B63E5] text-white mt-1">
+              <Link to="all-supplies" className="bg-[#00715D] text-white mt-1">
                 All Supplies
               </Link>
             </li>
             <li>
               <Link
                 to="dashboardLayout"
-                className="bg-[#0B63E5] text-white mt-1"
+                className="bg-[#00715D] text-white mt-1"
               >
                 Dashboard
               </Link>

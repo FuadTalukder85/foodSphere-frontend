@@ -4,7 +4,7 @@ import latestNewsImg1 from "../../assets/img/latestNewsImg/latestNewsImg1.jpg";
 const LatestNews = () => {
   return (
     <Container>
-      <div className="mt-28">
+      <div className="mt-11 md:mt-28">
         <h1 className="text-4xl text-[#00715D] font-semibold text-center uppercase">
           latest <span className="text-[#FFB606]">news</span>
         </h1>
@@ -13,7 +13,7 @@ const LatestNews = () => {
           those who need it!
         </p>
       </div>
-      <div className="grid md:grid-cols-3 gap-5 mt-16">
+      <div className="grid md:grid-cols-3 gap-5 mt-7 md:mt-16">
         <div>
           <img src={latestNewsImg1} alt="" />
           <div className="p-7">
