@@ -4,7 +4,7 @@ export const baseApi = createApi({
   reducerPath: "baseApi",
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:5000",
-    // credentials: "include",
+    credentials: "include",
   }),
   endpoints: (builder) => ({
     // users: builder.mutation({
@@ -16,19 +16,19 @@ export const baseApi = createApi({
     // }),
     getSupplies: builder.query({
       query: () => ({
-        url: "/all-supplies",
+        url: "/supplies",
         method: "GET",
       }),
     }),
-    // getSupplyById: builder.query({
-    //   query: () => ({
-    //     url: `/all-supplies/${_id}`,
-    //     method: "GET",
-    //   }),
-    // }),
+    getSupplyById: builder.query({
+      query: (_id) => ({
+        url: `/supplies/${_id}`,
+        method: "GET",
+      }),
+    }),
     deleteSupply: builder.mutation({
       query: (_id) => ({
-        url: `/all-supplies/${_id}`,
+        url: `/asupplies/${_id}`,
         method: "DELETE",
       }),
     }),
@@ -41,7 +41,7 @@ export const baseApi = createApi({
     // }),
     updateSupply: builder.mutation({
       query: (updateSupplyData) => ({
-        url: "/all-supplies",
+        url: "/supplies",
         method: "PUT",
         body: updateSupplyData,
       }),
@@ -53,7 +53,7 @@ export const baseApi = createApi({
 export const {
   // useUsersMutation,
   useGetSuppliesQuery,
-  // useGetSupplyByIdQuery,
+  useGetSupplyByIdQuery,
   useDeleteSupplyMutation,
   // usePostSupplyMutation,
   useUpdateSupplyMutation,

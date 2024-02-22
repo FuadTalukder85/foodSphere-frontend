@@ -1,9 +1,10 @@
-import ViewSupplyModal from "../supply/ViewSupplyModal";
+// import ViewSupplyModal from "../viewSupplyModal/ViewSupplyModal";
 import { Link } from "react-router-dom";
 import { useGetSuppliesQuery } from "../../redux/api/api";
 
 const AllSuppliesCard = () => {
   const { data, isLoading } = useGetSuppliesQuery(undefined);
+
   console.log(data);
   if (isLoading) {
     return <></>;
@@ -43,10 +44,10 @@ const AllSuppliesCard = () => {
                     document.getElementById("my_modal_4").showModal()
                   }
                 >
-                  <Link to={`supplies/${supplyData._id}`}>View Detail</Link>
+                  <Link to={`${supplyData._id}`}>View Detail</Link>
                 </button>
                 <dialog id="my_modal_4" className="modal">
-                  <ViewSupplyModal></ViewSupplyModal>
+                  {/* <ViewSupplyModal></ViewSupplyModal> */}
                 </dialog>
               </div>
             </div>

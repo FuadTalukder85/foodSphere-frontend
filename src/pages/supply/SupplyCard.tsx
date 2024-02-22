@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ViewSupplyModal from "./ViewSupplyModal";
+// import ViewSupplyModal from "../viewSupplyModal/ViewSupplyModal";
 import { useGetSuppliesQuery } from "../../redux/api/api";
 
 const SupplyCard = () => {
@@ -44,10 +44,10 @@ const SupplyCard = () => {
                       document.getElementById("my_modal_4").showModal()
                     }
                   >
-                    <Link to={`supplies/${supplyData._id}`}>View Detail</Link>
+                    <Link to={``}>View Detail</Link>
                   </button>
                   <dialog id="my_modal_4" className="modal">
-                    <ViewSupplyModal></ViewSupplyModal>
+                    {/* <ViewSupplyModal></ViewSupplyModal> */}
                   </dialog>
                 </div>
               </div>
