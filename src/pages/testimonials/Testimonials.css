@@ -4,11 +4,22 @@
 }
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
+  font-size: 15px;
   margin-top: 125px;
   margin-right: 25px;
   color: white;
   background: #ffb606;
   padding: 25px;
+}
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: "prev";
+  font-size: 30px;
+}
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: "next";
+  font-size: 30px;
 }
 
 .swiper-button-prev,

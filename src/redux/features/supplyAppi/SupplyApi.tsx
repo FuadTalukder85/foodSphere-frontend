@@ -34,6 +34,12 @@ const supplyApi = baseApi.injectEndpoints({
         method: "DELETE",
       }),
     }),
+    getAllStats: builder.query({
+      query: () => ({
+        url: "/all-stats",
+        method: "GET",
+      }),
+    }),
   }),
 });
 export const {
@@ -42,4 +48,5 @@ export const {
   useGetSupplyByIdQuery,
   useDeleteSupplyMutation,
   useUpdateSupplyMutation,
+  useGetAllStatsQuery,
 } = supplyApi;

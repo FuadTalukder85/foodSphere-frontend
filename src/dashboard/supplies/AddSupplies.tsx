@@ -18,7 +18,7 @@ const AddSupplies = () => {
   return (
     <div className="p-10 h-screen bg-[#e8f8f5]">
       <div className="hero">
-        <div className="hero-content mt-[10%] flex justify-center items-center">
+        <div className="hero-content mt-[5%] flex justify-center items-center">
           <div className="card mx-auto shrink-0 md:w-[600px] shadow-xl border  rounded-xl">
             <h1 className="text-center text-2xl font-bold text-white bg-[#FFB606] rounded-t-lg p-1">
               Add Supply

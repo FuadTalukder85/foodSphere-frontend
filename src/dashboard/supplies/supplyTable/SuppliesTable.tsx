@@ -7,6 +7,7 @@ import {
   useDeleteSupplyMutation,
   useGetSuppliesQuery,
 } from "../../../redux/features/supplyAppi/SupplyApi";
+import UnderLine from "../../../components/underLine/UnderLine";
 
 const SuppliesTable = () => {
   const { data, isLoading, refetch } = useGetSuppliesQuery(undefined);
@@ -45,9 +46,9 @@ const SuppliesTable = () => {
   }
 
   return (
-    <div>
+    <div className="bg-[#e8f8f5] px-10">
       <div className="flex justify-between items-center">
-        <h3 className="text-[#FFB606] font-semibold text-xl">
+        <h3 className="text-[#00715D] font-semibold text-xl">
           Total Supplies: 36
         </h3>
         <Link to="/dashboard/create-supply">
@@ -56,7 +57,8 @@ const SuppliesTable = () => {
           </button>
         </Link>
       </div>
-      <div className="overflow-x-auto">
+      <UnderLine></UnderLine>
+      <div className="overflow-x-auto mt-5">
         <table className="table">
           {/* head */}
           <thead>
@@ -76,7 +78,7 @@ const SuppliesTable = () => {
                 key={supplyItem._id}
                 className="text-[#1E2436] font-semibold text-lg"
               >
-                <th>{index + 1}</th>
+                <th className="text-[#00715D]">{index + 1}</th>
                 <td>{supplyItem.title}</td>
                 <td>{supplyItem.category}</td>
                 <td>{supplyItem.quantity}</td>
@@ -86,7 +88,10 @@ const SuppliesTable = () => {
                   </Link>
                 </td>
                 <td className="text-red-600 text-4xl">
-                  <button onClick={() => handleDelete(supplyItem._id)}>
+                  <button
+                    onClick={() => handleDelete(supplyItem._id)}
+                    className="mx-auto flex justify-center"
+                  >
                     <RiDeleteBin5Line></RiDeleteBin5Line>
                   </button>
                 </td>

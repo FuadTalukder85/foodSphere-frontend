@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
 import { useAppDispatch, useAppSelector } from "../../redux/Hook";
 import { logout, useCurrentUser } from "../../redux/features/auth/AuthSlice";
+import ButtonOutline from "../../components/button/ButtonOutline";
 
 const NavBar = () => {
   const dispatch = useAppDispatch();
@@ -16,23 +17,25 @@ const NavBar = () => {
     <Container>
       <div className="navbar">
         <div className="navbar-start md:flex justify-between">
-          <p>
+          <Link to="/">
             <span className="text-4xl font-bold text-[#00715D]">
               Food<span className="text-[#FFB606]">Sphere</span>
             </span>
-          </p>
+          </Link>
         </div>
         {/*  #62cdee*/}
         <div className="navbar-end hidden lg:flex">
           <ul className="md:flex items-center space-x-4 font-semibold p-5">
-            <li>
+            <li className="text-[#00715D] font-bold">
               <Link to="/">Home</Link>
             </li>
-            <li>
+            <li className="text-[#00715D] font-bold">
               <Link to="supplies">All Supplies</Link>
             </li>
-            <li>{user ? <Link to="dashboard">Dashboard</Link> : ""}</li>
-            <li>
+            <li className="text-[#00715D] font-bold">
+              {user ? <Link to="dashboard">Dashboard</Link> : ""}
+            </li>
+            <li className="text-[#00715D] font-bold">
               {user ? (
                 <button
                   onClick={handleLogout}

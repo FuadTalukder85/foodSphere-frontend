@@ -9,7 +9,8 @@ const supplySlice = createSlice({
   initialState,
   reducers: {
     addSupply: (state, action) => {
-      state.supplies.push({ ...action.payload });
+      const { supplies } = action.payload;
+      state.supplies = supplies;
     },
   },
 });
