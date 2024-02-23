@@ -11,11 +11,6 @@ const supplySlice = createSlice({
     addSupply: (state, action) => {
       state.supplies.push({ ...action.payload });
     },
-    // removeSupply: (state, action: PayloadAction<string>) => {
-    //   state.supplies = state.supplies.filter(
-    //     (supply) => supply._id !== action.payload
-    //   );
-    // },
   },
 });
 

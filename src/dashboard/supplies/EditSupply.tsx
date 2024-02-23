@@ -6,7 +6,7 @@ const EditSupply = () => {
   const updateSupplyData = useLoaderData();
   const { _id, image, category, title, quantity, description } =
     updateSupplyData;
-  const { handleSubmit, reset, register } = useForm();
+  const { handleSubmit, register } = useForm();
 
   const onSubmit = (data: FormData) => {
     fetch(`http://localhost:5000/supplies/${_id}`, {
@@ -24,7 +24,6 @@ const EditSupply = () => {
           showConfirmButton: false,
           timer: 1500,
         });
-        reset();
       })
       .catch((error) => {
         console.log(error);

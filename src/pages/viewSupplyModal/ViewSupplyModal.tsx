@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useGetSupplyByIdQuery } from "../../redux/api/api";
+import { useGetSupplyByIdQuery } from "../../redux/features/supplyAppi/SupplyApi";
 
 const ViewSupplyModal = () => {
   const { id } = useParams();

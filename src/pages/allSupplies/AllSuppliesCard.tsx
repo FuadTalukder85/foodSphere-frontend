@@ -1,6 +1,5 @@
-// import ViewSupplyModal from "../viewSupplyModal/ViewSupplyModal";
 import { Link } from "react-router-dom";
-import { useGetSuppliesQuery } from "../../redux/api/api";
+import { useGetSuppliesQuery } from "../../redux/features/supplyAppi/SupplyApi";
 
 const AllSuppliesCard = () => {
   const { data, isLoading } = useGetSuppliesQuery(undefined);

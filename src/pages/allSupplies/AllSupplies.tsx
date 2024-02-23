@@ -1,5 +1,4 @@
 import Container from "../../components/container/Container";
-
 import AllSuppliesCard from "./AllSuppliesCard";
 
 const AllSupplies = () => {

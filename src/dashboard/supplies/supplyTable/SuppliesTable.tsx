@@ -1,11 +1,12 @@
 import { FaRegEdit } from "react-icons/fa";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { Link } from "react-router-dom";
+
+import Swal from "sweetalert2";
 import {
   useDeleteSupplyMutation,
   useGetSuppliesQuery,
-} from "../../../redux/api/api";
-import Swal from "sweetalert2";
+} from "../../../redux/features/supplyAppi/SupplyApi";
 
 const SuppliesTable = () => {
   const { data, isLoading, refetch } = useGetSuppliesQuery(undefined);

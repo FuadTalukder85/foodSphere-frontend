@@ -1,34 +1,18 @@
 import { useForm, SubmitHandler } from "react-hook-form";
-import { useAppDispatch } from "../../redux/Hook";
-import Swal from "sweetalert2";
-import { addSupply } from "../../redux/features/SupplySlice";
+import { usePostSupplyMutation } from "../../redux/features/supplyAppi/SupplyApi";
 
 const AddSupplies = () => {
   const { register, handleSubmit, reset } = useForm();
-  const dispatch = useAppDispatch();
+  const [postSupply] = usePostSupplyMutation();
+  const onSubmit: SubmitHandler = async (data) => {
+    try {
+      await postSupply(data);
+      reset();
+    } catch (error) {
+      console.error("Registration failed:", error);
+    }
 
-  const onSubmit: SubmitHandler = (data) => {
-    fetch("http://localhost:5000/create-supply", {
-      method: "POST",
-      headers: { "Content-type": "application/json" },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "Supply has been saved",
-          showConfirmButton: false,
-          timer: 1500,
-        });
-        dispatch(addSupply(data));
-        reset();
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    console.log(data);
   };
 
   return (
