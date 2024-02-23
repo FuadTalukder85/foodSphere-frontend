@@ -5,7 +5,7 @@ const Banner = () => {
     <div className="banner mt-3 md:mt-0 py-5 md:py-48 flex">
       <Container>
         <div className=" text-white">
-          <h1 className="mx-auto font-bold max-w-[20ch] text-3xl md:text-7xl">
+          <h1 className="text-center font-bold max-w-[20ch] text-3xl md:text-7xl">
             Build a Beautiful World. Charity organizations.
           </h1>
           <p className="text-xl text-center mt-2 md:mt-9">

@@ -28,7 +28,7 @@ export const baseApi = createApi({
     }),
     deleteSupply: builder.mutation({
       query: (_id) => ({
-        url: `/asupplies/${_id}`,
+        url: `/supplies/${_id}`,
         method: "DELETE",
       }),
     }),
@@ -40,12 +40,11 @@ export const baseApi = createApi({
     //   }),
     // }),
     updateSupply: builder.mutation({
-      query: (updateSupplyData) => ({
-        url: "/supplies",
+      query: ({ _id, supplyData }) => ({
+        url: `/supplies/${_id}`,
         method: "PUT",
-        body: updateSupplyData,
+        body: supplyData,
       }),
-      // invalidatesTags: ["supply"],
     }),
   }),
 });

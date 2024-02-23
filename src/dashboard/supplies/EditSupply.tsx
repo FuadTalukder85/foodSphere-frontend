@@ -1,4 +1,36 @@
+import { useForm } from "react-hook-form";
+import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
+
 const EditSupply = () => {
+  const updateSupplyData = useLoaderData();
+  const { _id, image, category, title, quantity, description } =
+    updateSupplyData;
+  const { handleSubmit, reset, register } = useForm();
+
+  const onSubmit = (data: FormData) => {
+    fetch(`http://localhost:5000/supplies/${_id}`, {
+      method: "PUT",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Event Content has been Updated",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        reset();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <div className="p-10 h-screen bg-[#e8f8f5]">
       <div className="hero">
@@ -7,7 +39,7 @@ const EditSupply = () => {
             <h1 className="text-center text-2xl font-bold text-white bg-[#FFB606] rounded-t-lg p-1">
               Edit Supply
             </h1>
-            <form className="card-body p-10">
+            <form onSubmit={handleSubmit(onSubmit)} className="card-body p-10">
               {/* img */}
               <div className="form-control mt-3">
                 <label className="label">
@@ -16,6 +48,8 @@ const EditSupply = () => {
                   </span>
                 </label>
                 <input
+                  {...register("image")}
+                  defaultValue={image}
                   type="text"
                   placeholder="image here"
                   className="w-full bg-white border py-1 px-3"
@@ -29,6 +63,8 @@ const EditSupply = () => {
                   </span>
                 </label>
                 <input
+                  {...register("category")}
+                  defaultValue={category}
                   type="text"
                   placeholder="category type here"
                   className="w-full bg-white border py-1 px-3"
@@ -42,6 +78,8 @@ const EditSupply = () => {
                   </span>
                 </label>
                 <input
+                  defaultValue={title}
+                  {...register("title")}
                   type="text"
                   placeholder="title type here"
                   className="w-full bg-white border py-1 px-3"
@@ -55,6 +93,8 @@ const EditSupply = () => {
                   </span>
                 </label>
                 <input
+                  defaultValue={quantity}
+                  {...register("quantity")}
                   type="text"
                   placeholder="quantity type here"
                   className="w-full bg-white border py-1 px-3"
@@ -69,6 +109,8 @@ const EditSupply = () => {
                   </span>
                 </label>
                 <textarea
+                  defaultValue={description}
+                  {...register("description")}
                   placeholder="description type here"
                   className="w-full py-1 px-3 bg-white"
                 ></textarea>

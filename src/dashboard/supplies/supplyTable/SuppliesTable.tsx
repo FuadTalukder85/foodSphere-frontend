@@ -80,7 +80,7 @@ const SuppliesTable = () => {
                 <td>{supplyItem.category}</td>
                 <td>{supplyItem.quantity}</td>
                 <td className="text-[#FFB606] text-4xl flex justify-center">
-                  <Link to="/dashboard/edit-supply">
+                  <Link to={`/dashboard/edit-supply/${supplyItem._id}`}>
                     <FaRegEdit></FaRegEdit>
                   </Link>
                 </td>

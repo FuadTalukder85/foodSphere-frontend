@@ -13,6 +13,7 @@
     "@egjs/react-flicking": "^4.11.2",
     "@reduxjs/toolkit": "^2.2.1",
     "@tanstack/react-query": "^5.21.2",
+    "framer-motion": "^11.0.5",
     "js-cookie": "^3.0.5",
     "jwt-decode": "^4.0.0",
     "localforage": "^1.10.0",

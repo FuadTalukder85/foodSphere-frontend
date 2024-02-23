@@ -60,8 +60,10 @@ export const router = createBrowserRouter([
         element: <AddSupplies></AddSupplies>,
       },
       {
-        path: "/dashboard/edit-supply",
+        path: "/dashboard/edit-supply/:id",
         element: <EditSupply></EditSupply>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/supplies/${params.id}`),
       },
     ],
   },
