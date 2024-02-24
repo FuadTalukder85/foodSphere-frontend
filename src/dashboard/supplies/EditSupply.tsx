@@ -1,14 +1,23 @@
-import { useForm } from "react-hook-form";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+
+type TUpdateSupplyData = {
+  _id: string;
+  image: string;
+  category: string;
+  title: string;
+  quantity: string;
+  description: string;
+};
 
 const EditSupply = () => {
   const updateSupplyData = useLoaderData();
   const { _id, image, category, title, quantity, description } =
-    updateSupplyData;
+    updateSupplyData as TUpdateSupplyData;
   const { handleSubmit, register } = useForm();
 
-  const onSubmit = (data: FormData) => {
+  const onSubmit: SubmitHandler<FieldValues> = (data) => {
     fetch(`http://localhost:5000/supplies/${_id}`, {
       method: "PUT",
       headers: { "Content-type": "application/json" },

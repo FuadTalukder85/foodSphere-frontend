@@ -15,7 +15,7 @@ const SuppliesTable = () => {
 
   const [deleteSupply] = useDeleteSupplyMutation();
 
-  const handleDelete = (_id) => {
+  const handleDelete = (_id: string) => {
     Swal.fire({
       title: "Are you want to delete this supply?",
       text: "You won't be able to revert this!",
@@ -73,7 +73,7 @@ const SuppliesTable = () => {
           </thead>
           <tbody>
             {/* row 1 */}
-            {data.map((supplyItem, index) => (
+            {data.map((supplyItem: any, index: number) => (
               <tr
                 key={supplyItem._id}
                 className="text-[#1E2436] font-semibold text-lg"

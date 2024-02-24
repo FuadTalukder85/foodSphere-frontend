@@ -19,7 +19,8 @@ const ChartData = () => {
     "#5E3790",
     "#F4C274",
   ];
-  const getPath = (x, y, width, height) => {
+
+  const getPath = (x: number, y: number, width: number, height: number) => {
     return `M${x},${y + height}C${x + width / 3},${y + height} ${
       x + width / 2
     },${y + height / 3}
@@ -30,7 +31,7 @@ const ChartData = () => {
     Z`;
   };
 
-  const TriangleBar = (props) => {
+  const TriangleBar = (props: any) => {
     const { fill, x, y, width, height } = props;
 
     return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
@@ -57,7 +58,7 @@ const ChartData = () => {
           shape={<TriangleBar />}
           label={{ position: "top" }}
         >
-          {data.map((entry, index) => (
+          {data.map((entry: any, index: number) => (
             <Cell key={`cell-${index}`} fill={colors[index % 20]} />
           ))}
         </Bar>

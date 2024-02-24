@@ -10,7 +10,7 @@ const AllSuppliesCard = () => {
   }
   return (
     <>
-      {data.map((supplyData) => (
+      {data.map((supplyData: any) => (
         <div
           key={supplyData._id}
           className="col-span-6 md:col-span-3 mx-auto p-1 md:p-7 shadow-xl "
@@ -36,18 +36,9 @@ const AllSuppliesCard = () => {
                 </h3>
               </div>
               <div className="flex justify-center items-center mt-5">
-                {/* You can open the modal using document.getElementById('ID').showModal() method */}
-                <button
-                  className="border-2 border-[#FFB606] text-[#00715D] font-semibold px-3 py-1 rounded-lg mb-3 md:mb-0"
-                  onClick={() =>
-                    document.getElementById("my_modal_4").showModal()
-                  }
-                >
+                <button className="border-2 border-[#FFB606] text-[#00715D] font-semibold px-3 py-1 rounded-lg mb-3 md:mb-0">
                   <Link to={`${supplyData._id}`}>View Detail</Link>
                 </button>
-                <dialog id="my_modal_4" className="modal">
-                  {/* <ViewSupplyModal></ViewSupplyModal> */}
-                </dialog>
               </div>
             </div>
           </div>

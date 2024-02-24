@@ -9,7 +9,7 @@ const SupplyCard = () => {
   }
   return (
     <>
-      {data.slice(0, 6).map((supplyData) => (
+      {data.slice(0, 6).map((supplyData: any) => (
         <div
           key={supplyData._id}
           className="col-span-6 md:col-span-4 mx-auto p-1 md:p-7 shadow-xl "
@@ -29,25 +29,16 @@ const SupplyCard = () => {
                   Category:{" "}
                   <span className="text-[#FFB606]">{supplyData.category}</span>
                 </h3>
-                <h3 className="text-mg text-[#00715D] font-bold">
+                <h3 className="text-[#00715D] font-bold">
                   Quantity:
                   <span className="text-[#FFB606]"> {supplyData.quantity}</span>
                 </h3>
               </div>
               <div className="flex justify-center items-center mt-3 md:mt-0">
                 <div className="">
-                  {/* You can open the modal using document.getElementById('ID').showModal() method */}
-                  <button
-                    className="border-2 border-[#FFB606] text-[#00715D] font-semibold px-3 py-1 rounded-lg mb-3 md:mb-0"
-                    onClick={() =>
-                      document.getElementById("my_modal_4").showModal()
-                    }
-                  >
-                    <Link to={``}>View Detail</Link>
+                  <button className="border-2 border-[#FFB606] text-[#00715D] font-semibold px-3 py-1 rounded-lg mb-3 md:mb-0">
+                    <Link to={`supplies/${supplyData._id}`}>View Detail</Link>
                   </button>
-                  <dialog id="my_modal_4" className="modal">
-                    {/* <ViewSupplyModal></ViewSupplyModal> */}
-                  </dialog>
                 </div>
               </div>
             </div>

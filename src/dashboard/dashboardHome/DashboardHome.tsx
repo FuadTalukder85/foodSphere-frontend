@@ -10,7 +10,7 @@ const DashboardHome = () => {
   }
   console.log("total users => ", data.totalUsers);
   return (
-    <div className="px-10 bg-[#e8f8f5] h-[100vh]">
+    <div className="px-10 bg-[#E8F8F5] h-[100vh]">
       <div className="grid grid-cols-12 gap-10 pt-6">
         <div className="col-span-3 border-2 border-[#FFB606] rounded-lg p-5 flex justify-center">
           <h1 className="text-3xl font-semibold text-[#00715D]">

@@ -1,10 +1,10 @@
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm, SubmitHandler, FieldValues } from "react-hook-form";
 import { usePostSupplyMutation } from "../../redux/features/supplyAppi/SupplyApi";
 
 const AddSupplies = () => {
   const { register, handleSubmit, reset } = useForm();
   const [postSupply] = usePostSupplyMutation();
-  const onSubmit: SubmitHandler = async (data) => {
+  const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     try {
       await postSupply(data);
       reset();

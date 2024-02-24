@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Container from "../../components/container/Container";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm, SubmitHandler, FieldValues } from "react-hook-form";
 import { useLoginUsersMutation } from "../../redux/features/auth/AuthApi";
 import { useAppDispatch } from "../../redux/Hook";
 import { setUser } from "../../redux/features/auth/AuthSlice";
@@ -16,7 +16,7 @@ const Login = () => {
 
   const { from } = location.state || { from: { pathname: "/" } };
 
-  const onSubmit: SubmitHandler = async (data) => {
+  const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     const userInfo = {
       email: data.email,
       password: data.password,
@@ -24,13 +24,12 @@ const Login = () => {
     try {
       const res = await loggedUser(userInfo).unwrap();
       const user = verifyToken(res.token);
-      console.log(user);
+
       const { token } = res;
       dispatch(setUser({ user: user, token: res.token }));
       localStorage.setItem("token", token);
       Cookies.set("refreshToken", token);
       nagivate(from, { replace: true });
-      console.log(res);
     } catch (error) {
       console.log(error);
     }

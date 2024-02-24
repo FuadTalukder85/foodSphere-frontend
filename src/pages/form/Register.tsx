@@ -1,12 +1,12 @@
 import Container from "../../components/container/Container";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm, SubmitHandler, FieldValues } from "react-hook-form";
 import { useRegisterUsersMutation } from "../../redux/features/auth/AuthApi";
 
 const Register = () => {
   const { register, handleSubmit } = useForm();
   const [users] = useRegisterUsersMutation();
 
-  const onSubmit: SubmitHandler = async (data) => {
+  const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     try {
       await users(data);
     } catch (error) {

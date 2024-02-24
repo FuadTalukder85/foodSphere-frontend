@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
 import { useAppDispatch, useAppSelector } from "../../redux/Hook";
 import { logout, useCurrentUser } from "../../redux/features/auth/AuthSlice";
-import ButtonOutline from "../../components/button/ButtonOutline";
 
 const NavBar = () => {
   const dispatch = useAppDispatch();
@@ -23,7 +22,7 @@ const NavBar = () => {
             </span>
           </Link>
         </div>
-        {/*  #62cdee*/}
+
         <div className="navbar-end hidden lg:flex">
           <ul className="md:flex items-center space-x-4 font-semibold p-5">
             <li className="text-[#00715D] font-bold">
