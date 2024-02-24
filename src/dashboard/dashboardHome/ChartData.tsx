@@ -59,7 +59,7 @@ const ChartData = () => {
           label={{ position: "top" }}
         >
           {data.map((entry: any, index: number) => (
-            <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+            <Cell key={`cell-${entry}`} fill={colors[index % 20]} />
           ))}
         </Bar>
       </BarChart>
