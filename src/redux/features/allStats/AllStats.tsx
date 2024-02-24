@@ -8,7 +8,14 @@ const allStatsApi = baseApi.injectEndpoints({
         method: "GET",
       }),
     }),
+    getAllCategoryCounts: builder.query({
+      query: () => ({
+        url: "/categoryCounts",
+        method: "GET",
+      }),
+    }),
   }),
 });
 
-export const { useGetAllStatsQuery } = allStatsApi;
+export const { useGetAllStatsQuery, useGetAllCategoryCountsQuery } =
+  allStatsApi;
