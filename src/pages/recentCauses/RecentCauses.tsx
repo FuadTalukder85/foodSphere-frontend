@@ -1,5 +1,8 @@
 import Container from "../../components/container/Container";
 import recentCauseImg1 from "../../assets/img/recentCauses/1.jpg";
+import recentCauseImg2 from "../../assets/img/recentCauses/2.jpg";
+import recentCauseImg3 from "../../assets/img/recentCauses/3.jpg";
+import recentCauseImg4 from "../../assets/img/recentCauses/4.jpg";
 
 const RecentCauses = () => {
   return (
@@ -44,7 +47,7 @@ const RecentCauses = () => {
         <div className="">
           <img
             className="border-b-2 mx-auto border-[#FFB606]"
-            src={recentCauseImg1}
+            src={recentCauseImg2}
             alt=""
           />
           <div className="pe-3 text-center md:text-left">
@@ -71,7 +74,7 @@ const RecentCauses = () => {
         <div className="">
           <img
             className="border-b-2 mx-auto border-[#FFB606]"
-            src={recentCauseImg1}
+            src={recentCauseImg3}
             alt=""
           />
           <div className="pe-3 text-center md:text-left">
@@ -98,7 +101,7 @@ const RecentCauses = () => {
         <div className="">
           <img
             className="border-b-2 mx-auto border-[#FFB606]"
-            src={recentCauseImg1}
+            src={recentCauseImg4}
             alt=""
           />
           <div className="pe-3 text-center md:text-left">

@@ -55,16 +55,16 @@ const Footer = () => {
               (000) - 9630
             </p>
             <p className="mt-1 flex gap-3">
-              <button className="bg-[#00715D] w-[40px] h-[40px] flex items-center justify-center rounded-full">
+              <button className="border-2 border-[#FFB606] w-[40px] h-[40px] flex items-center justify-center rounded-full">
                 <FaFacebook className="text-[#FFB606] text-xl"></FaFacebook>
               </button>
-              <button className="bg-[#00715D] w-[40px] h-[40px] flex items-center justify-center rounded-full">
+              <button className="border-2 border-[#FFB606] w-[40px] h-[40px] flex items-center justify-center rounded-full">
                 <FaInstagram className="text-[#FFB606] text-xl"></FaInstagram>
               </button>
-              <button className="bg-[#00715D] w-[40px] h-[40px] flex items-center justify-center rounded-full">
+              <button className="border-2 border-[#FFB606] w-[40px] h-[40px] flex items-center justify-center rounded-full">
                 <FaTwitter className="text-[#FFB606] text-xl"></FaTwitter>
               </button>
-              <button className="bg-[#00715D] w-[40px] h-[40px] flex items-center justify-center rounded-full">
+              <button className="border-2 border-[#FFB606] w-[40px] h-[40px] flex items-center justify-center rounded-full">
                 <SlSocialPintarest className="text-[#FFB606] text-xl"></SlSocialPintarest>
               </button>
             </p>

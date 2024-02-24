@@ -12,8 +12,8 @@ const AboutUs = () => {
       <div className="grid md:grid-cols-12 gap-10 items-center p-5 md:p-0">
         <div className="md:col-span-7">
           <p className="md:mt-5">
-            Be aHand Is a Most Charity/ Non-profit/ Fundraising/ NGO
-            organizations. Now Be aHand Is a Biggest organizations In This
+            FoodSphere Is a Most Charity/ Non-profit/ Fundraising/ NGO
+            organizations. Now FoodSphere Is a Biggest organizations In This
             Globe. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Nemo repudiandae sunt delectus praesentium adipisci voluptatem sed,
             consectetur! Optio quis alias necessitatibus quidem dolore est nobis
@@ -28,8 +28,8 @@ const AboutUs = () => {
             History Of Be <span className="text-[#FFB606]">FoodSphere</span>
           </h3>
           <p className="mt-3">
-            Be aHand Start Their Work With Small organizations In The Year
-            1990.Now Be aHand is world wide organizations. There Consectetur
+            FoodSphere Start Their Work With Small organizations In The Year
+            1990.Now FoodSphere is world wide organizations. There Consectetur
             adipisicing elit. Nemo repudiandae sunt delectus praesentium
             adipisci voluptatem sed, consectetur! Optio quis alias
             necessitatibus quidem.

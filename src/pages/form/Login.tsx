@@ -82,7 +82,7 @@ const Login = () => {
                   <p>
                     <span className="font-bold label-text-alt">
                       <span className="text-[#00715D]">
-                        Don't have and account?
+                        Don't have an account?
                       </span>
                     </span>
                     <Link

@@ -1,5 +1,7 @@
 import Container from "../../components/container/Container";
 import latestNewsImg1 from "../../assets/img/latestNewsImg/latestNewsImg1.jpg";
+import latestNewsImg2 from "../../assets/img/latestNewsImg/latestNewsImg2.jpg";
+import latestNewsImg3 from "../../assets/img/latestNewsImg/latestNewsImg3.jpg";
 
 const LatestNews = () => {
   return (
@@ -42,10 +44,10 @@ const LatestNews = () => {
               Rear More
             </button>
           </div>
-          <img src={latestNewsImg1} alt="" />
+          <img src={latestNewsImg2} alt="" />
         </div>
         <div>
-          <img src={latestNewsImg1} alt="" />
+          <img src={latestNewsImg3} alt="" />
           <div className="p-7">
             <h1 className="text-2xl text-[#FFB606] font-semibold">
               Let's Move With Our Blog

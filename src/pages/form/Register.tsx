@@ -1,6 +1,7 @@
 import Container from "../../components/container/Container";
 import { useForm, SubmitHandler, FieldValues } from "react-hook-form";
 import { useRegisterUsersMutation } from "../../redux/features/auth/AuthApi";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const { register, handleSubmit } = useForm();
@@ -70,7 +71,23 @@ const Register = () => {
                     Forgot password?
                   </a>
                 </label>
+                <label className="label">
+                  <p>
+                    <span className="font-bold label-text-alt">
+                      <span className="text-[#00715D]">
+                        Allready have an account?
+                      </span>
+                    </span>
+                    <Link
+                      to="/login"
+                      className="text-[#FFB606] link font-bold ps-2"
+                    >
+                      please login
+                    </Link>
+                  </p>
+                </label>
               </div>
+
               <div className="form-control mt-6">
                 <button
                   type="submit"
