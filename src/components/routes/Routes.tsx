@@ -64,7 +64,7 @@ export const router = createBrowserRouter([
         element: <EditSupply></EditSupply>,
         loader: ({ params }) =>
           fetch(
-            `l2-b2-assignment-6-backend-fuad-talukder85.vercel.app/supplies/${params.id}`
+            `http://l2-b2-assignment-6-backend-fuad-talukder85-k46s6mhhj.vercel.app/supplies/${params.id}`
           ),
       },
     ],
