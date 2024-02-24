@@ -1,15 +1,49 @@
 import { Link } from "react-router-dom";
-import { useGetSuppliesQuery } from "../../redux/features/supplyAppi/SupplyApi";
+// import { useGetSuppliesQuery } from "../../redux/features/supplyAppi/SupplyApi";
+import { useEffect, useState } from "react";
 
 const SupplyCard = () => {
-  const { data, isLoading } = useGetSuppliesQuery(undefined);
-  console.log(data);
-  if (isLoading) {
-    return <></>;
-  }
+  // const { data, isLoading } = useGetSuppliesQuery(undefined);
+  // State variable to store data
+  const [data, setData] = useState(null);
+  console.log("server data => ", data);
+
+  // useEffect hook to fetch data when the component mounts
+  useEffect(() => {
+    // Define an asynchronous function to fetch data
+    const fetchData = async () => {
+      // Fetch data from an API endpoint
+      const response = await fetch(
+        "https://l2-b2-assignment-6-backend-fuad-talukder85.vercel.app/supplies"
+      );
+
+      // Check if response is successful
+      if (response.ok) {
+        // Parse the JSON response
+        const jsonData = await response.json();
+        // Update the state with the fetched data
+        setData(jsonData);
+      } else {
+        // If response is not successful, log error
+        console.error(
+          "Failed to fetch data:",
+          response.status,
+          response.statusText
+        );
+      }
+    };
+
+    // Call the fetchData function when the component mounts
+    fetchData();
+  }, []); // Empty dependency array means the effect runs only once when the component mounts
+
+  // console.log(data);
+  // if (isLoading) {
+  //   return <></>;
+  // }
   return (
     <>
-      {data.slice(0, 6).map((supplyData: any) => (
+      {data?.slice(0, 6).map((supplyData: any) => (
         <div
           key={supplyData._id}
           className="col-span-6 md:col-span-4 mx-auto p-1 md:p-7 shadow-xl "

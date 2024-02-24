@@ -18,11 +18,14 @@ const EditSupply = () => {
   const { handleSubmit, register } = useForm();
 
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
-    fetch(`http://localhost:5000/supplies/${_id}`, {
-      method: "PUT",
-      headers: { "Content-type": "application/json" },
-      body: JSON.stringify(data),
-    })
+    fetch(
+      `l2-b2-assignment-6-backend-fuad-talukder85.vercel.app/supplies/${_id}`,
+      {
+        method: "PUT",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify(data),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
