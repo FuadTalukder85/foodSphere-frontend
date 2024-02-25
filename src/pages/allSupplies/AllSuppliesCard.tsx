@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { useGetSuppliesQuery } from "../../redux/features/supplyAppi/SupplyApi";
+import { motion } from "framer-motion";
 
 const AllSuppliesCard = () => {
   const { data, isLoading } = useGetSuppliesQuery(undefined);
 
-  console.log(data);
   if (isLoading) {
     return <></>;
   }
@@ -15,11 +15,25 @@ const AllSuppliesCard = () => {
           key={supplyData._id}
           className="col-span-6 md:col-span-3 mx-auto p-1 md:p-7 shadow-xl "
         >
-          <img
+          <motion.img
+            whileHover={{
+              opacity: 1,
+              scale: 1.03,
+              transition: {
+                duration: 0.3,
+                ease: [0, 0.71, 0.2, 1.01],
+                scale: {
+                  type: "spring",
+                  damping: 5,
+                  stiffness: 100,
+                  restDelta: 0.001,
+                },
+              },
+            }}
             className="border border-y-[#FFB606] shadow-2xl"
             src={supplyData.image}
             alt=""
-          />
+          ></motion.img>
           <div className="mt-8">
             <h3 className="text-[#FFB606] text-xl font-semibold text-center">
               {supplyData.title}

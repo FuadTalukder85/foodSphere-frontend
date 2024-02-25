@@ -2,6 +2,7 @@ import Container from "../../components/container/Container";
 import latestNewsImg1 from "../../assets/img/latestNewsImg/latestNewsImg1.jpg";
 import latestNewsImg2 from "../../assets/img/latestNewsImg/latestNewsImg2.jpg";
 import latestNewsImg3 from "../../assets/img/latestNewsImg/latestNewsImg3.jpg";
+import { motion } from "framer-motion";
 
 const LatestNews = () => {
   return (
@@ -16,8 +17,26 @@ const LatestNews = () => {
         </p>
       </div>
       <div className="grid md:grid-cols-3 gap-5 mt-7 md:mt-16">
-        <div>
-          <img src={latestNewsImg1} alt="" />
+        <div className="overflow-hidden">
+          <motion.img
+            whileHover={{
+              opacity: 1,
+              scale: 1.03,
+              transition: {
+                duration: 0.3,
+                ease: [0, 0.71, 0.2, 1.01],
+                scale: {
+                  type: "spring",
+                  damping: 5,
+                  stiffness: 100,
+                  restDelta: 0.001,
+                },
+              },
+            }}
+            className="border border-y-[#FFB606] shadow-2xl"
+            src={latestNewsImg1}
+            alt=""
+          ></motion.img>
           <div className="p-7">
             <h1 className="text-2xl text-[#FFB606] font-semibold">
               Let's Move With Our Blog
@@ -31,7 +50,7 @@ const LatestNews = () => {
             </button>
           </div>
         </div>
-        <div>
+        <div className="overflow-hidden">
           <div className="p-7">
             <h1 className="text-2xl text-[#FFB606] font-semibold">
               Let's Move With Our Blog
@@ -44,10 +63,46 @@ const LatestNews = () => {
               Rear More
             </button>
           </div>
-          <img src={latestNewsImg2} alt="" />
+          <motion.img
+            whileHover={{
+              opacity: 1,
+              scale: 1.03,
+              transition: {
+                duration: 0.3,
+                ease: [0, 0.71, 0.2, 1.01],
+                scale: {
+                  type: "spring",
+                  damping: 5,
+                  stiffness: 100,
+                  restDelta: 0.001,
+                },
+              },
+            }}
+            className="border border-y-[#FFB606] shadow-2xl"
+            src={latestNewsImg2}
+            alt=""
+          ></motion.img>
         </div>
-        <div>
-          <img src={latestNewsImg3} alt="" />
+        <div className="overflow-hidden">
+          <motion.img
+            whileHover={{
+              opacity: 1,
+              scale: 1.03,
+              transition: {
+                duration: 0.3,
+                ease: [0, 0.71, 0.2, 1.01],
+                scale: {
+                  type: "spring",
+                  damping: 5,
+                  stiffness: 100,
+                  restDelta: 0.001,
+                },
+              },
+            }}
+            className="border border-y-[#FFB606] shadow-2xl"
+            src={latestNewsImg3}
+            alt=""
+          ></motion.img>
           <div className="p-7">
             <h1 className="text-2xl text-[#FFB606] font-semibold">
               Let's Move With Our Blog

@@ -8,7 +8,7 @@ const DashboardHome = () => {
   if (isLoading) {
     return <></>;
   }
-  console.log("total users => ", data.totalUsers);
+
   return (
     <div className="px-10 bg-[#E8F8F5] h-[100vh]">
       <div className="grid grid-cols-12 gap-10 pt-6">

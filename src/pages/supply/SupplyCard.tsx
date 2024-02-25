@@ -1,58 +1,39 @@
 import { Link } from "react-router-dom";
-// import { useGetSuppliesQuery } from "../../redux/features/supplyAppi/SupplyApi";
-import { useEffect, useState } from "react";
+import { useGetSuppliesQuery } from "../../redux/features/supplyAppi/SupplyApi";
+import { motion } from "framer-motion";
 
 const SupplyCard = () => {
-  // const { data, isLoading } = useGetSuppliesQuery(undefined);
-  // State variable to store data
-  const [data, setData] = useState(null);
-  console.log("server data => ", data);
+  const { data, isLoading } = useGetSuppliesQuery(undefined);
 
-  // useEffect hook to fetch data when the component mounts
-  useEffect(() => {
-    // Define an asynchronous function to fetch data
-    const fetchData = async () => {
-      // Fetch data from an API endpoint
-      const response = await fetch(
-        "https://l2-b2-assignment-6-backend-fuad-talukder85.vercel.app/supplies"
-      );
-
-      // Check if response is successful
-      if (response.ok) {
-        // Parse the JSON response
-        const jsonData = await response.json();
-        // Update the state with the fetched data
-        setData(jsonData);
-      } else {
-        // If response is not successful, log error
-        console.error(
-          "Failed to fetch data:",
-          response.status,
-          response.statusText
-        );
-      }
-    };
-
-    // Call the fetchData function when the component mounts
-    fetchData();
-  }, []); // Empty dependency array means the effect runs only once when the component mounts
-
-  // console.log(data);
-  // if (isLoading) {
-  //   return <></>;
-  // }
+  if (isLoading) {
+    return <></>;
+  }
   return (
     <>
       {data?.slice(0, 6).map((supplyData: any) => (
         <div
           key={supplyData._id}
-          className="col-span-6 md:col-span-4 mx-auto p-1 md:p-7 shadow-xl "
+          className="col-span-6 md:col-span-4 mx-auto p-1 md:p-7 shadow-xl"
         >
-          <img
+          <motion.img
+            whileHover={{
+              opacity: 1,
+              scale: 1.03,
+              transition: {
+                duration: 0.3,
+                ease: [0, 0.71, 0.2, 1.01],
+                scale: {
+                  type: "spring",
+                  damping: 5,
+                  stiffness: 100,
+                  restDelta: 0.001,
+                },
+              },
+            }}
             className="border border-y-[#FFB606] shadow-2xl"
             src={supplyData.image}
             alt=""
-          />
+          ></motion.img>
           <div className="mt-8">
             <h3 className="text-[#FFB606] text-xl font-semibold text-center">
               {supplyData.title}

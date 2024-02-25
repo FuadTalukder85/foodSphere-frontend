@@ -11,7 +11,6 @@ import UnderLine from "../../../components/underLine/UnderLine";
 
 const SuppliesTable = () => {
   const { data, isLoading, refetch } = useGetSuppliesQuery(undefined);
-  console.log("Supply data => ", data);
 
   const [deleteSupply] = useDeleteSupplyMutation();
 

@@ -19,7 +19,7 @@ const EditSupply = () => {
 
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     fetch(
-      `http://l2-b2-assignment-6-backend-fuad-talukder85-k46s6mhhj.vercel.app/supplies/${_id}`,
+      `https://l2-b2-assignment-6-backend-fuad-talukder85.vercel.app/supplies/${_id}`,
       {
         method: "PUT",
         headers: { "Content-type": "application/json" },

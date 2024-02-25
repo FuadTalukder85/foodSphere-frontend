@@ -13,8 +13,6 @@ const Register = () => {
     } catch (error) {
       console.error("Registration failed:", error);
     }
-
-    console.log(data);
   };
   return (
     <Container>

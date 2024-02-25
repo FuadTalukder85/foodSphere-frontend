@@ -1,5 +1,6 @@
 import Container from "../../components/container/Container";
 import aboutUsImg from "../../assets/img/aboutUsImg/aboutUsImg.png";
+import { motion } from "framer-motion";
 
 const AboutUs = () => {
   return (
@@ -39,7 +40,25 @@ const AboutUs = () => {
           </button>
         </div>
         <div className="md:col-span-5">
-          <img src={aboutUsImg} alt="" />
+          <motion.img
+            whileHover={{
+              opacity: 1,
+              scale: 1.03,
+              transition: {
+                duration: 0.3,
+                ease: [0, 0.71, 0.2, 1.01],
+                scale: {
+                  type: "spring",
+                  damping: 5,
+                  stiffness: 100,
+                  restDelta: 0.001,
+                },
+              },
+            }}
+            className="border border-y-[#FFB606] shadow-2xl"
+            src={aboutUsImg}
+            alt=""
+          ></motion.img>
         </div>
       </div>
     </Container>

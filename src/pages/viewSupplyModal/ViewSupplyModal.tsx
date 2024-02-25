@@ -5,13 +5,12 @@ import Container from "../../components/container/Container";
 
 const ViewSupplyModal = () => {
   const { id } = useParams();
-  console.log("params id =>", id);
+
   const { data, isLoading } = useGetSupplyByIdQuery(id);
 
   if (isLoading) {
     return <></>;
   }
-  console.log(data);
 
   return (
     <Container>

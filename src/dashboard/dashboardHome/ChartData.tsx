@@ -6,7 +6,7 @@ const ChartData = () => {
   if (isLoading) {
     return <></>;
   }
-  console.log("all stats data => ", data);
+
   const colors = [
     "#0088FE",
     "#00C49F",

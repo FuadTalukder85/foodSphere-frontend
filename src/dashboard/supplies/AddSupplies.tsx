@@ -11,8 +11,6 @@ const AddSupplies = () => {
     } catch (error) {
       console.error("Registration failed:", error);
     }
-
-    console.log(data);
   };
 
   return (
