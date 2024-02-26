@@ -63,23 +63,28 @@ const NavBar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-48 z-[1] p-2 shadow bg-slate-200 w-36"
           >
-            <li>
-              <Link to="/" className="bg-[#00715D] text-white">
-                Home
-              </Link>
+            <li className="text-[#00715D] font-bold">
+              <Link to="/">Home</Link>
             </li>
-            <li>
-              <Link to="all-supplies" className="bg-[#00715D] text-white mt-1">
-                All Supplies
-              </Link>
+            <li className="text-[#00715D] font-bold">
+              <Link to="supplies">All Supplies</Link>
             </li>
-            <li>
-              <Link
-                to="dashboardLayout"
-                className="bg-[#00715D] text-white mt-1"
-              >
-                Dashboard
-              </Link>
+            <li className="text-[#00715D] font-bold">
+              {user ? <Link to="dashboard">Dashboard</Link> : ""}
+            </li>
+            <li className="text-[#00715D] font-bold">
+              {user ? (
+                <button
+                  onClick={handleLogout}
+                  className="border-2 border-[#FFB606] px-6 py-2 rounded-lg"
+                >
+                  Logout
+                </button>
+              ) : (
+                <button className="border-2 border-[#FFB606] px-6 py-2 rounded-lg">
+                  <Link to="login">Login</Link>
+                </button>
+              )}
             </li>
           </ul>
         </div>
