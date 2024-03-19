@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
 import { useAppDispatch, useAppSelector } from "../../redux/Hook";
 import { logout, useCurrentUser } from "../../redux/features/auth/AuthSlice";
+import Theme from "../../components/theme/Theme";
 
 const NavBar = () => {
   const dispatch = useAppDispatch();
@@ -47,6 +48,9 @@ const NavBar = () => {
                   <Link to="login">Login</Link>
                 </button>
               )}
+            </li>
+            <li className="flex justify-center text-4xl font-bold">
+              <Theme></Theme>
             </li>
           </ul>
         </div>

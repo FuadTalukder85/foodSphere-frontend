@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Light Theme */
+.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark Theme */
+.dark-theme {
+  background-color: #0d1117;
+  color: #ffffff;
+}
+/* .dark-theme {
+  --main-heading: #fff;
+  --bg-clr: #111b20;
+  --para-clr: #ffb606;
+}
+
+.light-theme {
+  --main-heading: #fff;
+  --bg-clr: #fff;
+  --para-clr: #111b20;
+}
+
+h1 {
+  color: var(--main-heading);
+} */
