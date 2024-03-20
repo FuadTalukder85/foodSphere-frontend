@@ -9,7 +9,7 @@ const AddSupplies = () => {
       await postSupply(data);
       reset();
     } catch (error) {
-      console.error("Registration failed:", error);
+      console.error("Add supply failed:", error);
     }
   };
 

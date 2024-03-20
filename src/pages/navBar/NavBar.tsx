@@ -15,8 +15,8 @@ const NavBar = () => {
 
   return (
     <Container>
-      <div className="navbar">
-        <div className="navbar-start md:flex justify-between">
+      <div className="flex">
+        <div className="navbar-start md:flex items-center">
           <Link to="/">
             <span className="text-4xl font-bold text-[#00715D]">
               Food<span className="text-[#FFB606]">Sphere</span>
@@ -31,6 +31,12 @@ const NavBar = () => {
             </li>
             <li className="text-[#00715D] font-bold">
               <Link to="supplies">All Supplies</Link>
+            </li>
+            <li className="text-[#00715D] font-bold">
+              <Link to="volunteer">Volunteer</Link>
+            </li>
+            <li className="text-[#00715D] font-bold">
+              <Link to="supplies">About Us</Link>
             </li>
             <li className="text-[#00715D] font-bold">
               {user ? <Link to="dashboard">Dashboard</Link> : ""}

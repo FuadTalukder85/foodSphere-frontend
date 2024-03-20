@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import authReducer from "./features/auth/AuthSlice";
 import supplyReducer from "./features/supplyAppi/SupplySlice";
+import volunteerReducer from "./features/volunteerApi/VolunteerSlice";
 import statsReducer from "./features/allStats/AllStatsSlice";
 import { baseApi } from "./api/baseApi";
 import storage from "redux-persist/lib/storage";
@@ -25,6 +26,7 @@ export const store = configureStore({
     [baseApi.reducerPath]: baseApi.reducer,
     auth: persistAuthReducer,
     supplies: supplyReducer,
+    volunteer: volunteerReducer,
     allStats: statsReducer,
   },
   middleware: (getDefaultMiddlewares) =>
