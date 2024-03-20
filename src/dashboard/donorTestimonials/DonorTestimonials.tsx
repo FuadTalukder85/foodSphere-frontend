@@ -23,9 +23,8 @@ const DonorTestimonials = () => {
             navigation={true}
             modules={[Navigation]}
             className="mySwiper bg-[#0000002f]"
-            activeIndex={activeSlideIndex}
-            onSlideChange={(swiper) => setActiveSlideIndex(swiper.activeIndex)}
-            change
+            activeindex={activeSlideIndex}
+            onSlideChange={(swiper) => setActiveSlideIndex(swiper.activeindex)}
           >
             {data.map((testimonialData: any) => (
               <SwiperSlide key={testimonialData._id}>
