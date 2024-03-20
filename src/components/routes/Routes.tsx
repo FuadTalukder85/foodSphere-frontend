@@ -12,6 +12,7 @@ import ProtectedRoute from "../layout/ProtectedRoute";
 import AllSupplies from "../../pages/allSupplies/AllSupplies";
 import ViewSupplyModal from "../../pages/viewSupplyModal/ViewSupplyModal";
 import Volunteer from "../../pages/volunteer/Volunteer";
+import AboutUsPage from "../../pages/aboutUs/AboutUsPage";
 
 export const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ export const router = createBrowserRouter([
       {
         path: "volunteer",
         element: <Volunteer></Volunteer>,
+      },
+      {
+        path: "about-us",
+        element: <AboutUsPage></AboutUsPage>,
       },
       {
         path: "login",

@@ -36,7 +36,7 @@ const NavBar = () => {
               <Link to="volunteer">Volunteer</Link>
             </li>
             <li className="text-[#00715D] font-bold">
-              <Link to="supplies">About Us</Link>
+              <Link to="about-us">About Us</Link>
             </li>
             <li className="text-[#00715D] font-bold">
               {user ? <Link to="dashboard">Dashboard</Link> : ""}
