@@ -13,6 +13,8 @@ import AllSupplies from "../../pages/allSupplies/AllSupplies";
 import ViewSupplyModal from "../../pages/viewSupplyModal/ViewSupplyModal";
 import Volunteer from "../../pages/volunteer/Volunteer";
 import AboutUsPage from "../../pages/aboutUs/AboutUsPage";
+import DonorTestimonialsForm from "../../dashboard/donorTestimonials/DonorTestimonialsForm";
+import DonorTestimonials from "../../dashboard/donorTestimonials/DonorTestimonials";
 
 export const router = createBrowserRouter([
   {
@@ -68,6 +70,14 @@ export const router = createBrowserRouter([
       {
         path: "/dashboard/create-supply",
         element: <AddSupplies></AddSupplies>,
+      },
+      {
+        path: "/dashboard/create-testimonial",
+        element: <DonorTestimonialsForm></DonorTestimonialsForm>,
+      },
+      {
+        path: "/dashboard/donor-testimonial",
+        element: <DonorTestimonials></DonorTestimonials>,
       },
       {
         path: "/dashboard/edit-supply/:id",

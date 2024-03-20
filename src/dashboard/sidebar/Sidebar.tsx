@@ -15,6 +15,9 @@ const Sidebar = () => {
       <button className="bg-[#FFB606] w-full py-2 mt-2 rounded-lg font-bold">
         <Link to="/dashboard/supplies">All Supplies</Link>
       </button>
+      <button className="bg-[#FFB606] w-full py-2 mt-2 rounded-lg font-bold">
+        <Link to="/dashboard/donor-testimonial">Donor Testimonial</Link>
+      </button>
     </div>
   );
 };
