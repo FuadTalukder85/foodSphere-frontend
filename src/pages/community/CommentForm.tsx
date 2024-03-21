@@ -1,7 +1,7 @@
 import { useForm, SubmitHandler, FieldValues } from "react-hook-form";
 import { usePostCommentMutation } from "../../redux/features/commentApi/CommentApi";
 
-const CommentFotm = () => {
+const CommentForm = () => {
   const { register, handleSubmit, reset } = useForm();
   const [postComment] = usePostCommentMutation();
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
@@ -14,7 +14,7 @@ const CommentFotm = () => {
   };
 
   return (
-    <div className="mt-11">
+    <div className="mt-5">
       <div className="mt-5 flex justify-center items-center">
         <div className="card mx-auto shrink-0 md:w-full shadow-xl border rounded-xl">
           <form
@@ -46,6 +46,15 @@ const CommentFotm = () => {
               />
             </div>
 
+            {/* date */}
+            {/* <div className="form-control w-full">
+              <input
+                type="date"
+                {...register("date")}
+                className="w-full bg-white border py-1 px-3"
+              />
+            </div> */}
+
             <div className="form-control">
               <button
                 type="submit"
@@ -61,4 +70,4 @@ const CommentFotm = () => {
   );
 };
 
-export default CommentFotm;
+export default CommentForm;

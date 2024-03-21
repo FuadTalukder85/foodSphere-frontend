@@ -2,9 +2,18 @@ import Container from "../../components/container/Container";
 import { motion } from "framer-motion";
 
 import { useGetcommentQuery } from "../../redux/features/commentApi/CommentApi";
+import { useEffect } from "react";
 
 const CommentCard = () => {
-  const { data, isLoading } = useGetcommentQuery(undefined);
+  const { data, isLoading, refetch } = useGetcommentQuery(undefined);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      refetch();
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, [refetch]);
 
   if (isLoading) {
     return <></>;
@@ -13,11 +22,12 @@ const CommentCard = () => {
     <Container>
       <div className="grid grid-cols-12 justify-between gap-5 mt-10">
         {data.map((commentData) => (
-          <div className="col-span-3 border p-3">
+          <div key={commentData._id} className="col-span-3 border p-3">
             <div>
               <h3 className="text-[#00715D] font-semibold">
                 Post by : {commentData.name}
               </h3>
+              <p>{commentData.Date}</p>
               <motion.img
                 whileHover={{
                   opacity: 1,
