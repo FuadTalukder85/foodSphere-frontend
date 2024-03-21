@@ -16,7 +16,7 @@ const NavBar = () => {
   return (
     <Container>
       <div className="flex">
-        <div className="navbar-start md:flex items-center">
+        <div className="navbar-start md:flex items-center w-[1/4]">
           <Link to="/">
             <span className="text-4xl font-bold text-[#00715D]">
               Food<span className="text-[#FFB606]">Sphere</span>
@@ -24,7 +24,7 @@ const NavBar = () => {
           </Link>
         </div>
 
-        <div className="navbar-end hidden lg:flex">
+        <div className="navbar-end hidden lg:flex w-full">
           <ul className="md:flex items-center space-x-4 font-semibold p-5">
             <li className="text-[#00715D] font-bold">
               <Link to="/">Home</Link>
@@ -34,6 +34,9 @@ const NavBar = () => {
             </li>
             <li className="text-[#00715D] font-bold">
               <Link to="volunteer">Volunteer</Link>
+            </li>
+            <li className="text-[#00715D] font-bold">
+              <Link to="community">Community</Link>
             </li>
             <li className="text-[#00715D] font-bold">
               <Link to="about-us">About Us</Link>

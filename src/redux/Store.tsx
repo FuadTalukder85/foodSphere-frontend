@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import authReducer from "./features/auth/AuthSlice";
 import supplyReducer from "./features/supplyAppi/SupplySlice";
 import volunteerReducer from "./features/volunteerApi/VolunteerSlice";
+import commentReducer from "./features/commentApi/CommentSlice";
 import testimonialsReducer from "./features/testimonialsApi/TestimonialsSlice";
 
 import statsReducer from "./features/allStats/AllStatsSlice";
@@ -29,6 +30,7 @@ export const store = configureStore({
     auth: persistAuthReducer,
     supplies: supplyReducer,
     volunteer: volunteerReducer,
+    comment: commentReducer,
     testimonials: testimonialsReducer,
     allStats: statsReducer,
   },
