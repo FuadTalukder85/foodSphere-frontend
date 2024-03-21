@@ -20,7 +20,7 @@ const AboutUsPage = () => {
         </Container>
       </div>
       <AboutUs></AboutUs>
-      <div className="bg-[#FFB606] mt-11 text-center">
+      <div className="bg-[#FFB606] mt-24 text-center">
         <Container>
           <div className="py-16">
             <h1 className="text-3xl text-white font-bold max-w-[35ch] mx-auto">

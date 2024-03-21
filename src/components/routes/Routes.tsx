@@ -11,11 +11,11 @@ import Login from "../../pages/form/Login";
 import ProtectedRoute from "../layout/ProtectedRoute";
 import AllSupplies from "../../pages/allSupplies/AllSupplies";
 import ViewSupplyModal from "../../pages/viewSupplyModal/ViewSupplyModal";
-import Volunteer from "../../pages/volunteer/Volunteer";
 import AboutUsPage from "../../pages/aboutUs/AboutUsPage";
 import DonorTestimonialsForm from "../../dashboard/donorTestimonials/DonorTestimonialsForm";
 import DonorTestimonials from "../../dashboard/donorTestimonials/DonorTestimonials";
 import Community from "../../pages/community/Community";
+import VolunteerForm from "../../pages/volunteer/VolunteerForm";
 
 export const router = createBrowserRouter([
   {
@@ -36,7 +36,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "volunteer",
-        element: <Volunteer></Volunteer>,
+        element: <VolunteerForm></VolunteerForm>,
       },
       {
         path: "community",

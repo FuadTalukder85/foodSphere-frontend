@@ -1,3 +1,5 @@
+import VolunteerCard from "../volunteer/VolunteerCard";
+
 const OurVolunteer = () => {
   return (
     <div>
@@ -10,6 +12,7 @@ const OurVolunteer = () => {
           those who need it!
         </p>
       </div>
+      <VolunteerCard></VolunteerCard>
     </div>
   );
 };

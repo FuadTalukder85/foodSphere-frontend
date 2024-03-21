@@ -9,15 +9,21 @@ const Sidebar = () => {
         </span>
       </Link>
 
-      <button className="bg-[#FFB606] w-full py-2 mt-6 rounded-lg font-bold">
-        <Link to="/dashboard">Dashboard Home</Link>
-      </button>
-      <button className="bg-[#FFB606] w-full py-2 mt-2 rounded-lg font-bold">
-        <Link to="/dashboard/supplies">All Supplies</Link>
-      </button>
-      <button className="bg-[#FFB606] w-full py-2 mt-2 rounded-lg font-bold">
-        <Link to="/dashboard/donor-testimonial">Donor Testimonial</Link>
-      </button>
+      <Link to="/dashboard">
+        <button className="bg-[#FFB606] w-full py-2 mt-6 rounded-lg font-bold">
+          Dashboard Home
+        </button>
+      </Link>
+      <Link to="/dashboard/supplies">
+        <button className="bg-[#FFB606] w-full py-2 mt-2 rounded-lg font-bold">
+          All Supplies
+        </button>
+      </Link>
+      <Link to="/dashboard/donor-testimonial">
+        <button className="bg-[#FFB606] w-full py-2 mt-2 rounded-lg font-bold">
+          Donor Testimonial
+        </button>
+      </Link>
     </div>
   );
 };
