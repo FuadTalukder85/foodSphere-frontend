@@ -4,10 +4,18 @@ import { IoMenu } from "react-icons/io5";
 import { useAppDispatch, useAppSelector } from "../../redux/Hook";
 import { logout, useCurrentUser } from "../../redux/features/auth/AuthSlice";
 import Theme from "../../components/theme/Theme";
+import { useGetUserQuery } from "../../redux/features/auth/AuthApi";
 
 const NavBar = () => {
   const dispatch = useAppDispatch();
   const user = useAppSelector(useCurrentUser);
+  console.log(user);
+
+  const { data, isLoading } = useGetUserQuery(undefined);
+  if (isLoading) {
+    return <></>;
+  }
+  console.log("user data => ", data);
 
   const handleLogout = () => {
     dispatch(logout());

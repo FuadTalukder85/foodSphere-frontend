@@ -1,7 +1,11 @@
 import { useForm, SubmitHandler, FieldValues } from "react-hook-form";
 import { usePostSupplyMutation } from "../../redux/features/supplyAppi/SupplyApi";
+import { useAppSelector } from "../../redux/Hook";
+import { useCurrentUser } from "../../redux/features/auth/AuthSlice";
 
 const AddSupplies = () => {
+  const user = useAppSelector(useCurrentUser);
+  console.log("user on supply", user);
   const { register, handleSubmit, reset } = useForm();
   const [postSupply] = usePostSupplyMutation();
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
