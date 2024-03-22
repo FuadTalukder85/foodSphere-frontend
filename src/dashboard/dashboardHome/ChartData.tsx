@@ -39,8 +39,8 @@ const ChartData = () => {
   return (
     <div className="mt-11">
       <BarChart
-        width={1500}
-        height={500}
+        width={window.innerWidth < 768 ? window.innerWidth - 20 : 1500}
+        height={window.innerWidth < 768 ? 300 : 500}
         data={data}
         margin={{
           top: 20,

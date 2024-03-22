@@ -10,7 +10,7 @@ const Community = () => {
           <h1 className="text-5xl font-bold text-white text-center">
             GRATITUDE WALL
           </h1>
-          <div className="flex md:gap-48 items-center">
+          <div className="md:flex md:gap-48 items-center p-4 md:p-0">
             <div className="text-[#00715D] mt-5">
               <p>We wanted to create a way people could connect again.</p>
               <p className="max-w-[85ch]">

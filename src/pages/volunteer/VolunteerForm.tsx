@@ -19,7 +19,7 @@ const VolunteerForm = () => {
   };
   return (
     <Container>
-      <div className="p-10 flex gap-10 justify-between">
+      <div className="p-4 md:p-10 md:flex gap-10 justify-between">
         <div>
           <img src={volunterImg} alt="" />
           <p className="mt-7">
@@ -47,15 +47,16 @@ const VolunteerForm = () => {
             Mail Us At: mail@gmail.com{" "}
           </p>
         </div>
-        <div className="hero">
+        {/* form */}
+        <div className="hero mt-7 md:mt-0">
           <div className="flex justify-center items-center">
-            <div className="card mx-auto shrink-0 md:w-[600px] shadow-xl border rounded-xl">
+            <div className="card mx-auto shrink-0 w-full md:w-[600px] shadow-xl border rounded-xl">
               <h1 className="text-center text-3xl font-bold text-white bg-[#FFB606] rounded-t-lg p-1">
                 Registration form
               </h1>
               <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="card-body p-10 bg-[#e8f8f5]"
+                className="card-body md:p-10 bg-[#e8f8f5]"
               >
                 {/* first name */}
                 <div className="flex justify-between gap-5">

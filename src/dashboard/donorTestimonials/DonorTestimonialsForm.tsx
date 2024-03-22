@@ -13,10 +13,10 @@ const DonorTestimonialsForm = () => {
     }
   };
   return (
-    <div className="p-10 h-screen bg-[#e8f8f5]">
+    <div className="md:p-10 h-screen bg-[#e8f8f5]">
       <div className="hero">
-        <div className="hero-content mt-[5%] flex justify-center items-center">
-          <div className="card mx-auto shrink-0 md:w-[600px] shadow-xl border  rounded-xl">
+        <div className="hero-content mt-[5%] flex justify-center items-center w-full">
+          <div className="card mx-auto shrink-0 w-full md:w-[600px] shadow-xl border  rounded-xl">
             <h1 className="text-center text-2xl font-bold text-white bg-[#FFB606] rounded-t-lg p-1">
               Add Testimonials
             </h1>
@@ -62,7 +62,7 @@ const DonorTestimonialsForm = () => {
                 ></textarea>
               </div>
 
-              <div className="form-control mt-6 w-[45%] mx-auto">
+              <div className="form-control mt-6 md:w-[45%] mx-auto">
                 <button
                   type="submit"
                   className="bg-[#FFB606] hover:bg-[#00715D] transition-all text-white tracking-widest font-bold rounded py-2 px-5"

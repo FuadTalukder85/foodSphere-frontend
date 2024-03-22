@@ -22,7 +22,7 @@ const Theme = () => {
   }, [theme]);
 
   return (
-    <button onClick={() => toggleTheme()}>
+    <button onClick={() => toggleTheme()} className="text-4xl">
       {theme === "light-theme" ? <CgDarkMode /> : <CiLight />}
     </button>
   );

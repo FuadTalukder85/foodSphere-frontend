@@ -20,14 +20,17 @@ const AddSupplies = () => {
   };
 
   return (
-    <div className="p-10 h-screen bg-[#e8f8f5]">
+    <div className="md:p-10 h-screen bg-[#e8f8f5]">
       <div className="hero">
-        <div className="hero-content mt-[5%] flex justify-center items-center">
-          <div className="card mx-auto shrink-0 md:w-[600px] shadow-xl border  rounded-xl">
+        <div className="hero-content mt-[5%] flex justify-center items-center w-full">
+          <div className="card mx-auto shrink-0 w-full md:w-[600px] shadow-xl border rounded-xl">
             <h1 className="text-center text-2xl font-bold text-white bg-[#FFB606] rounded-t-lg p-1">
               Add Supply
             </h1>
-            <form onSubmit={handleSubmit(onSubmit)} className="card-body p-10">
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="card-body md:p-10"
+            >
               {/* img */}
               <div className="form-control mt-3">
                 <label htmlFor="image" className="label">

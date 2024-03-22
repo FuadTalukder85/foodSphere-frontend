@@ -23,10 +23,10 @@ const NavBar = () => {
 
   return (
     <Container>
-      <div className="flex">
-        <div className="navbar-start md:flex items-center w-[1/4]">
+      <div className="flex py-3">
+        <div className="navbar-start flex items-center w-[1/4]">
           <Link to="/">
-            <span className="text-4xl font-bold text-[#00715D]">
+            <span className="text-4xl px-4 md:px-0 font-bold text-[#00715D]">
               Food<span className="text-[#FFB606]">Sphere</span>
             </span>
           </Link>
@@ -50,7 +50,7 @@ const NavBar = () => {
               <Link to="about-us">About Us</Link>
             </li>
             <li className="text-[#00715D] font-bold">
-              <Link to="leaderboard">Leaderboard</Link>
+              <Link to="leaderboard">leaderboard</Link>
             </li>
             <li className="text-[#00715D] font-bold">
               {user ? <Link to="dashboard">Dashboard</Link> : ""}
@@ -76,22 +76,38 @@ const NavBar = () => {
         </div>
         {/*  */}
         <div className="dropdown navbar-end md:hidden flex">
-          <div
-            tabIndex={0}
-            role="button"
-            className="btn text-5xl btn-ghost lg:hidden text-[#00715D]"
-          >
-            <IoMenu></IoMenu>
+          <div className="flex justify-center items-center">
+            <Theme></Theme>
+
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn text-5xl btn-ghost lg:hidden text-[#00715D]"
+            >
+              <IoMenu></IoMenu>
+            </div>
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-48 z-[1] p-2 shadow bg-slate-200 w-36"
+            className="menu menu-sm dropdown-content mt-16 z-[1] p-2 shadow bg-slate-200 w-36"
           >
             <li className="text-[#00715D] font-bold">
               <Link to="/">Home</Link>
             </li>
             <li className="text-[#00715D] font-bold">
               <Link to="supplies">All Supplies</Link>
+            </li>
+            <li className="text-[#00715D] font-bold">
+              <Link to="volunteer">Volunteer</Link>
+            </li>
+            <li className="text-[#00715D] font-bold">
+              <Link to="community">Community</Link>
+            </li>
+            <li className="text-[#00715D] font-bold">
+              <Link to="about-us">About Us</Link>
+            </li>
+            <li className="text-[#00715D] font-bold">
+              <Link to="leaderboard">leaderboard</Link>
             </li>
             <li className="text-[#00715D] font-bold">
               {user ? <Link to="dashboard">Dashboard</Link> : ""}

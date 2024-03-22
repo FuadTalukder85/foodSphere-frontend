@@ -8,8 +8,8 @@ const AboutUsPage = () => {
     <div className="mt-7">
       <div className="bg-[#FFB606]">
         <Container>
-          <div className="py-16">
-            <h1 className="text-5xl text-white font-bold">
+          <div className="md:py-16 p-4 md:p-0">
+            <h1 className="text-3xl md:text-5xl text-white font-bold">
               We Work As a Charity/ Social/ Non-profit/ NGO/ Foundarisign
               Organization.
             </h1>

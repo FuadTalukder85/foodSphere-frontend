@@ -20,7 +20,7 @@ const CommentCard = () => {
   }
   return (
     <Container>
-      <div className="grid grid-cols-12 justify-between gap-5 mt-10">
+      <div className="md:grid grid-cols-12 justify-between gap-5 mt-10">
         {data.map((commentData) => (
           <div key={commentData._id} className="col-span-3 border p-3">
             <div>

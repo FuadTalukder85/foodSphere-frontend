@@ -21,7 +21,7 @@ const VolunteerCard = () => {
 
   return (
     <Container>
-      <div className="grid grid-cols-12 justify-between gap-5 mt-10">
+      <div className="md:grid grid-cols-12 justify-between gap-5 mt-10">
         {data.map((volunteerData) => (
           <div key={volunteerData._id} className="col-span-4 border p-3">
             <div>

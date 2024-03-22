@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <div className="bg-[#00715D] h-[100vh] sticky top-0 left-0 px-10">
+    <div className="bg-[#00715D] md:h-[100vh] sticky top-0 left-0 p-4 md:p-0 md:px-10">
       <Link to="/" className="text-center flex justify-center pt-3">
         <span className="text-4xl font-bold text-[#FFB606]">
           Food<span className="text-[#FFB606]">Sphere</span>

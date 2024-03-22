@@ -1,6 +1,7 @@
 import { FaRegEdit } from "react-icons/fa";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import "./SuppliesTable.css";
 
 import Swal from "sweetalert2";
 import {
@@ -45,7 +46,7 @@ const SuppliesTable = () => {
   }
 
   return (
-    <div className="bg-[#e8f8f5] px-10">
+    <div className="bg-[#e8f8f5] px-4 md:px-10">
       <div className="flex justify-between items-center">
         <h3 className="text-[#00715D] font-semibold text-xl">
           Total Supplies: 36
@@ -61,7 +62,7 @@ const SuppliesTable = () => {
         <table className="table">
           {/* head */}
           <thead>
-            <tr className="text-xl text-[#00715D]">
+            <tr className="md:text-xl text-[#00715D]">
               <th>*</th>
               <th>Title</th>
               <th>Category</th>
@@ -75,21 +76,24 @@ const SuppliesTable = () => {
             {data.map((supplyItem: any, index: number) => (
               <tr
                 key={supplyItem._id}
-                className="text-[#1E2436] font-semibold text-lg"
+                className="text-[#1E2436] font-semibold md:text-lg"
               >
                 <th className="text-[#00715D]">{index + 1}</th>
                 <td>{supplyItem.title}</td>
                 <td>{supplyItem.category}</td>
                 <td>{supplyItem.quantity}</td>
-                <td className="text-[#FFB606] text-4xl flex justify-center">
-                  <Link to={`/dashboard/edit-supply/${supplyItem._id}`}>
+                <td className="text-[#FFB606] text-2xl md:text-4xl ">
+                  <Link
+                    className="mx-auto flex justify-center items-center"
+                    to={`/dashboard/edit-supply/${supplyItem._id}`}
+                  >
                     <FaRegEdit></FaRegEdit>
                   </Link>
                 </td>
-                <td className="text-red-600 text-4xl">
+                <td className="text-red-600 text-2xl md:text-4xl">
                   <button
                     onClick={() => handleDelete(supplyItem._id)}
-                    className="mx-auto flex justify-center"
+                    className="mx-auto flex justify-center items-center"
                   >
                     <RiDeleteBin5Line></RiDeleteBin5Line>
                   </button>

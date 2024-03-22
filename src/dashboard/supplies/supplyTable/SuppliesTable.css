@@ -1,0 +1,3 @@
+.table :where(th, td) {
+  padding-right: 0rem;
+}

@@ -15,11 +15,11 @@ const CommentForm = () => {
 
   return (
     <div className="mt-5">
-      <div className="mt-5 flex justify-center items-center">
-        <div className="card mx-auto shrink-0 md:w-full shadow-xl border rounded-xl">
+      <div className="mt-5 flex justify-center items-center p-4 md:p-0">
+        <div className="card mx-auto shrink-0 w-full shadow-xl border rounded-xl">
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex justify-between gap-5 p-5"
+            className="md:flex justify-between gap-5 p-5"
           >
             {/* name */}
             <div className="form-control w-full">
@@ -30,7 +30,7 @@ const CommentForm = () => {
               />
             </div>
             {/* comment */}
-            <div className="form-control w-full">
+            <div className="form-control w-full mt-5 md:mt-0">
               <input
                 {...register("comment")}
                 placeholder="type your comment here.."
@@ -38,7 +38,7 @@ const CommentForm = () => {
               />
             </div>
             {/* img */}
-            <div className="form-control w-full">
+            <div className="form-control w-full mt-5 md:mt-0">
               <input
                 {...register("image")}
                 placeholder="your image here.."
@@ -46,16 +46,7 @@ const CommentForm = () => {
               />
             </div>
 
-            {/* date */}
-            {/* <div className="form-control w-full">
-              <input
-                type="date"
-                {...register("date")}
-                className="w-full bg-white border py-1 px-3"
-              />
-            </div> */}
-
-            <div className="form-control">
+            <div className="form-control mt-5 md:mt-0">
               <button
                 type="submit"
                 className="bg-[#00715D] hover:bg-[#FFB606] transition-all text-white tracking-widest font-bold rounded py-2 px-5"

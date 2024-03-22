@@ -5,7 +5,7 @@ import DashboardContainer from "../components/container/DashboardContainer";
 const Dashboard = () => {
   return (
     <DashboardContainer>
-      <div className="grid grid-cols-12">
+      <div className="md:grid grid-cols-12">
         <div className="col-span-2">
           <Sidebar></Sidebar>
         </div>
