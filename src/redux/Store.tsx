@@ -4,8 +4,8 @@ import supplyReducer from "./features/supplyAppi/SupplySlice";
 import volunteerReducer from "./features/volunteerApi/VolunteerSlice";
 import commentReducer from "./features/commentApi/CommentSlice";
 import testimonialsReducer from "./features/testimonialsApi/TestimonialsSlice";
-
 import statsReducer from "./features/allStats/AllStatsSlice";
+import leatherboardReducer from "./features/LeatherBoardApi/LeatherboardSlice";
 import { baseApi } from "./api/baseApi";
 import storage from "redux-persist/lib/storage";
 import {
@@ -33,6 +33,7 @@ export const store = configureStore({
     comment: commentReducer,
     testimonials: testimonialsReducer,
     allStats: statsReducer,
+    leatherboard: leatherboardReducer,
   },
   middleware: (getDefaultMiddlewares) =>
     getDefaultMiddlewares({

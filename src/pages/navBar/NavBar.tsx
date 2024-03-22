@@ -50,6 +50,9 @@ const NavBar = () => {
               <Link to="about-us">About Us</Link>
             </li>
             <li className="text-[#00715D] font-bold">
+              <Link to="leaderboard">Leaderboard</Link>
+            </li>
+            <li className="text-[#00715D] font-bold">
               {user ? <Link to="dashboard">Dashboard</Link> : ""}
             </li>
             <li className="text-[#00715D] font-bold">

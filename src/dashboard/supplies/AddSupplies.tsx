@@ -9,8 +9,10 @@ const AddSupplies = () => {
   const { register, handleSubmit, reset } = useForm();
   const [postSupply] = usePostSupplyMutation();
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
+    const postSupplies = { user, ...data };
+
     try {
-      await postSupply(data);
+      await postSupply(postSupplies);
       reset();
     } catch (error) {
       console.error("Add supply failed:", error);
