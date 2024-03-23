@@ -3,8 +3,6 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import Container from "../../components/container/Container";
-import { useState } from "react";
-
 import "../../pages/testimonials/Testimonials.css";
 import { useGetTestimonialsQuery } from "../../redux/features/testimonialsApi/TestimonialsApi";
 import { Link } from "react-router-dom";
@@ -12,7 +10,7 @@ import UnderLine from "../../components/underLine/UnderLine";
 
 const DonorTestimonials = () => {
   const { data, isLoading } = useGetTestimonialsQuery(undefined);
-  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+
   if (isLoading) {
     return <></>;
   }
@@ -35,10 +33,6 @@ const DonorTestimonials = () => {
               navigation={true}
               modules={[Navigation]}
               className="mySwiper bg-[#0000002f]"
-              activeindex={activeSlideIndex}
-              onSlideChange={(swiper) =>
-                setActiveSlideIndex(swiper.activeindex)
-              }
             >
               {data.map((testimonialData: any) => (
                 <SwiperSlide key={testimonialData._id}>

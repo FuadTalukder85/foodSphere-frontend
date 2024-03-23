@@ -1,11 +1,25 @@
 # React + TypeScript + Vite + Redux
 
-### For run locally
+## For run locally
 
-First clone git repository https://github.com/Porgramming-Hero-web-course/l2-b2-assignment-6-fronten-FuadTalukder85.git then enter the peoject and install npm i vite. For run the project use this comman npm run dev then you will get the project url.
+- Clone the repository
+- Install npm i vite
+- For run the project use this command npm run dev
 
-#### Project overview
+## Live Url
 
-In this project i use react, react-router-dom, typesctipt, vite, redux.
+liv url
+
+## Project overview
 
 This is a Food Distribution and Supplies Management System project.
+
+## Technology
+
+- Typescript
+- React
+- Tailwind css
+- Daisyui
+- Redux
+- React hook form
+- Framer motion
