@@ -22,7 +22,7 @@ const VolunteerCard = () => {
   return (
     <Container>
       <div className="md:grid grid-cols-12 justify-between gap-5 mt-10">
-        {data.map((volunteerData: any) => (
+        {data?.map((volunteerData: any) => (
           <div key={volunteerData._id} className="col-span-4 border p-3">
             <div>
               <motion.img

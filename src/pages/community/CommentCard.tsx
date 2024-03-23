@@ -21,13 +21,12 @@ const CommentCard = () => {
   return (
     <Container>
       <div className="md:grid grid-cols-12 justify-between gap-5 mt-10">
-        {data.map((commentData: any) => (
+        {data?.map((commentData: any) => (
           <div key={commentData._id} className="col-span-3 border p-3">
             <div>
               <h3 className="text-[#00715D] font-semibold">
                 Post by : {commentData.name}
               </h3>
-              <p>{commentData.Date}</p>
               <motion.img
                 whileHover={{
                   opacity: 1,

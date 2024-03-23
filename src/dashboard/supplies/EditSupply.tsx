@@ -18,7 +18,7 @@ const EditSupply = () => {
   const { handleSubmit, register } = useForm();
 
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
-    fetch(`http://localhost:5000/supplies/${_id}`, {
+    fetch(`http://localhost:5173/supplies/${_id}`, {
       method: "PUT",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(data),

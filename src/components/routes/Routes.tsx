@@ -93,7 +93,7 @@ export const router = createBrowserRouter([
         path: "/dashboard/edit-supply/:id",
         element: <EditSupply></EditSupply>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/supplies/${params.id}`),
+          fetch(`http://localhost:5173/supplies/${params.id}`),
       },
     ],
   },

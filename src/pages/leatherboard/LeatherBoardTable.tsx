@@ -28,7 +28,7 @@ const LeatherBoardTable = () => {
             </thead>
             <tbody>
               {/* row */}
-              {sortedData.map((userData, index) => (
+              {sortedData?.map((userData, index) => (
                 <tr
                   key={userData._id}
                   className="text-[#1E2436] font-semibold md:text-lg"
