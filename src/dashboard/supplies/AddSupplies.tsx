@@ -98,7 +98,7 @@ const AddSupplies = () => {
                   </span>
                 </label>
                 <input
-                  {...register("quantity")}
+                  {...register("quantity", { required: true })}
                   type="number"
                   min="1"
                   placeholder="quantity type here"

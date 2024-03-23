@@ -18,7 +18,7 @@ const EditSupply = () => {
   const { handleSubmit, register } = useForm();
 
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
-    fetch(`http://localhost:5173/supplies/${_id}`, {
+    fetch(`http://localhost:5000/supplies/${_id}`, {
       method: "PUT",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(data),
@@ -102,8 +102,9 @@ const EditSupply = () => {
                 </label>
                 <input
                   defaultValue={quantity}
-                  {...register("quantity")}
-                  type="text"
+                  {...register("quantity", { required: true })}
+                  type="number"
+                  min={1}
                   placeholder="quantity type here"
                   className="w-full bg-white border py-1 px-3"
                 />
