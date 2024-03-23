@@ -4,18 +4,10 @@ import { IoMenu } from "react-icons/io5";
 import { useAppDispatch, useAppSelector } from "../../redux/Hook";
 import { logout, useCurrentUser } from "../../redux/features/auth/AuthSlice";
 import Theme from "../../components/theme/Theme";
-import { useGetUserQuery } from "../../redux/features/auth/AuthApi";
 
 const NavBar = () => {
   const dispatch = useAppDispatch();
   const user = useAppSelector(useCurrentUser);
-  console.log(user);
-
-  const { data, isLoading } = useGetUserQuery(undefined);
-  if (isLoading) {
-    return <></>;
-  }
-  console.log("user data => ", data);
 
   const handleLogout = () => {
     dispatch(logout());
@@ -50,7 +42,7 @@ const NavBar = () => {
               <Link to="about-us">About Us</Link>
             </li>
             <li className="text-[#00715D] font-bold">
-              <Link to="leaderboard">leaderboard</Link>
+              <Link to="leaderboard">Leaderboard</Link>
             </li>
             <li className="text-[#00715D] font-bold">
               {user ? <Link to="dashboard">Dashboard</Link> : ""}
@@ -107,7 +99,7 @@ const NavBar = () => {
               <Link to="about-us">About Us</Link>
             </li>
             <li className="text-[#00715D] font-bold">
-              <Link to="leaderboard">leaderboard</Link>
+              <Link to="leaderboard">Leaderboard</Link>
             </li>
             <li className="text-[#00715D] font-bold">
               {user ? <Link to="dashboard">Dashboard</Link> : ""}

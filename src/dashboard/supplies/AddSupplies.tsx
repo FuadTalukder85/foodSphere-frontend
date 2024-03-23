@@ -2,14 +2,34 @@ import { useForm, SubmitHandler, FieldValues } from "react-hook-form";
 import { usePostSupplyMutation } from "../../redux/features/supplyAppi/SupplyApi";
 import { useAppSelector } from "../../redux/Hook";
 import { useCurrentUser } from "../../redux/features/auth/AuthSlice";
+import { useGetUserQuery } from "../../redux/features/auth/AuthApi";
 
 const AddSupplies = () => {
-  const user = useAppSelector(useCurrentUser);
-  console.log("user on supply", user);
+  const loggedUser = useAppSelector(useCurrentUser);
+  console.log(loggedUser);
+  const { data, isLoading } = useGetUserQuery(undefined);
+
+  const findCurrentUser = (data: any[], currentUser: any) => {
+    return data.find((user) => user?.email === currentUser?.email);
+  };
+
+  if (!isLoading && data) {
+    const matchedUser = findCurrentUser(data, loggedUser);
+    console.log(matchedUser);
+    // const name = matchedUser.name;
+
+    if (matchedUser) {
+      // const { name } = matchedUser;
+      console.log("Found the currentUser:", matchedUser);
+    } else {
+      console.log("No matching user found for currentUser:", loggedUser);
+    }
+  }
+
   const { register, handleSubmit, reset } = useForm();
   const [postSupply] = usePostSupplyMutation();
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-    const postSupplies = { user, ...data };
+    const postSupplies = { loggedUser, ...data };
 
     try {
       await postSupply(postSupplies);
