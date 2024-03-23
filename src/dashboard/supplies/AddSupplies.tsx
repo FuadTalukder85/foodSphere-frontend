@@ -5,31 +5,31 @@ import { useCurrentUser } from "../../redux/features/auth/AuthSlice";
 import { useGetUserQuery } from "../../redux/features/auth/AuthApi";
 
 const AddSupplies = () => {
-  const loggedUser = useAppSelector(useCurrentUser);
-  console.log(loggedUser);
+  const user = useAppSelector(useCurrentUser);
+  console.log(user);
   const { data, isLoading } = useGetUserQuery(undefined);
 
   const findCurrentUser = (data: any[], currentUser: any) => {
     return data.find((user) => user?.email === currentUser?.email);
   };
 
+  let username = "";
+
   if (!isLoading && data) {
-    const matchedUser = findCurrentUser(data, loggedUser);
-    console.log(matchedUser);
-    // const name = matchedUser.name;
+    const matchedUser = findCurrentUser(data, user);
 
     if (matchedUser) {
-      // const { name } = matchedUser;
+      username = matchedUser.name;
       console.log("Found the currentUser:", matchedUser);
     } else {
-      console.log("No matching user found for currentUser:", loggedUser);
+      console.log("No matching user found for currentUser:", user);
     }
   }
 
   const { register, handleSubmit, reset } = useForm();
   const [postSupply] = usePostSupplyMutation();
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-    const postSupplies = { loggedUser, ...data };
+    const postSupplies = { username, user, ...data };
 
     try {
       await postSupply(postSupplies);
@@ -99,6 +99,8 @@ const AddSupplies = () => {
                 </label>
                 <input
                   {...register("quantity")}
+                  type="number"
+                  min="1"
                   placeholder="quantity type here"
                   className="w-full bg-white border py-1 px-3"
                 />
