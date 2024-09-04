@@ -39,7 +39,7 @@ const RecentCauses = () => {
               Charity, institutional and modern clothing offices clean extensive
               amounts of textures in an extensive.
             </p>
-            <button className="bg-[#FFB606] text-white px-6 py-2 rounded-lg mt-3 font-bold">
+            <button className="bg-[#FFB606] text-white px-6 py-2 mt-3 font-bold">
               Donate Now
             </button>
           </div>
@@ -66,7 +66,7 @@ const RecentCauses = () => {
               Charity, institutional and modern clothing offices clean extensive
               amounts of textures in an extensive.
             </p>
-            <button className="bg-[#FFB606] text-white px-6 py-2 rounded-lg mt-3 font-bold">
+            <button className="bg-[#FFB606] text-white px-6 py-2 mt-3 font-bold">
               Donate Now
             </button>
           </div>
@@ -93,7 +93,7 @@ const RecentCauses = () => {
               Charity, institutional and modern clothing offices clean extensive
               amounts of textures in an extensive.
             </p>
-            <button className="bg-[#FFB606] text-white px-6 py-2 rounded-lg mt-3 font-bold">
+            <button className="bg-[#FFB606] text-white px-6 py-2 mt-3 font-bold">
               Donate Now
             </button>
           </div>
@@ -120,7 +120,7 @@ const RecentCauses = () => {
               Charity, institutional and modern clothing offices clean extensive
               amounts of textures in an extensive.
             </p>
-            <button className="bg-[#FFB606] text-white px-6 py-2 rounded-lg mt-3 font-bold">
+            <button className="bg-[#FFB606] text-white px-6 py-2 mt-3 font-bold">
               Donate Now
             </button>
           </div>

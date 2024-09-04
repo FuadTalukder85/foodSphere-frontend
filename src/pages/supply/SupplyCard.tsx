@@ -10,10 +10,10 @@ const SupplyCard = () => {
   }
   return (
     <>
-      {data?.slice(0, 6).map((supplyData: any) => (
+      {data?.slice(0, 8).map((supplyData: any) => (
         <div
           key={supplyData._id}
-          className="col-span-6 md:col-span-4 mx-auto p-1 md:p-7 shadow-xl"
+          className="col-span-6 md:col-span-3 mx-auto p-1 md:p-7 shadow-xl"
         >
           <motion.img
             whileHover={{
@@ -51,7 +51,7 @@ const SupplyCard = () => {
               </div>
               <div className="flex justify-center items-center mt-3 md:mt-0">
                 <div className="">
-                  <button className="border-2 border-[#FFB606] text-[#00715D] font-semibold px-3 py-1 rounded-lg mb-3 md:mb-0">
+                  <button className="border-2 border-[#FFB606] text-[#00715D] font-semibold px-3 py-1 rounded-md mb-3 md:mb-0">
                     <Link to={`supplies/${supplyData._id}`}>View Detail</Link>
                   </button>
                 </div>
