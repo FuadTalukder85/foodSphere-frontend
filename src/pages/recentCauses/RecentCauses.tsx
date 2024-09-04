@@ -3,8 +3,17 @@ import recentCauseImg1 from "../../assets/img/recentCauses/1.jpg";
 import recentCauseImg2 from "../../assets/img/recentCauses/2.jpg";
 import recentCauseImg3 from "../../assets/img/recentCauses/3.jpg";
 import recentCauseImg4 from "../../assets/img/recentCauses/4.jpg";
+import AboutUs from "../aboutUs/AboutUs";
 
 const RecentCauses = () => {
+  const openModal = () => {
+    const modal = document.getElementById(
+      "my_modal_3"
+    ) as HTMLDialogElement | null;
+    if (modal) {
+      modal.showModal();
+    }
+  };
   return (
     <Container>
       <div className="mt-7 md:mt-24">
@@ -42,6 +51,24 @@ const RecentCauses = () => {
             <button className="bg-[#FFB606] text-white px-6 py-2 mt-3 font-bold">
               Donate Now
             </button>
+            {/* You can open the modal using document.getElementById('ID').showModal() method */}
+            <button className="btn" onClick={openModal}>
+              open modal
+            </button>
+            <dialog id="my_modal_3" className="modal">
+              <div className="modal-box max-w-[1200px]">
+                <form method="dialog">
+                  {/* if there is a button in form, it will close the modal */}
+                  <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+                    ✕
+                  </button>
+                </form>
+                <h3 className="font-bold text-lg">Hello!</h3>
+                <p className="py-4">
+                  <AboutUs></AboutUs>
+                </p>
+              </div>
+            </dialog>
           </div>
         </div>
         <div className="">
