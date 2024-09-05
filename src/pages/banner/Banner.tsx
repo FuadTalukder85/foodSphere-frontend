@@ -1,7 +1,7 @@
 import Container from "../../components/container/Container";
 import { motion } from "framer-motion";
 import "./Banner.css";
-import DonationForm from "../donationForm/DonationForm.jsx";
+import DonationForm from "../donationForm/DonationForm.tsx";
 
 const Banner = () => {
   const openModal = () => {

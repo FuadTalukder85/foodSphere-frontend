@@ -1,25 +1,34 @@
-import React from "react";
-
+import { useForm, SubmitHandler, FieldValues } from "react-hook-form";
+import { usePostDonateMutation } from "../../redux/features/donateApi/DonateApi";
 const DonationForm = () => {
+  const { register, handleSubmit, reset } = useForm();
+  const [postDonate] = usePostDonateMutation();
+  const onSubmit: SubmitHandler<FieldValues> = async (data) => {
+    try {
+      await postDonate(data);
+      reset();
+    } catch (error) {
+      console.error("Donation failed:", error);
+    }
+  };
+
   return (
     <div className="bg-[#F9F9F9] pt-5">
-      <form
-        //   onSubmit={handleSubmit(onSubmit)}
-        className="card-body md:p-5"
-      >
+      <form onSubmit={handleSubmit(onSubmit)} className="card-body md:p-5">
         <div className="flex gap-3 justify-between w-full">
           <h3 className="text-xl font-normal">Donor information</h3>
           <div className="form-control">
             <div className="flex border rounded-lg overflow-hidden w-64">
-              <span class="bg-gray-100 px-3 flex items-center text-gray-500">
+              <span className="bg-gray-100 px-3 flex items-center text-gray-500">
                 $
               </span>
               <input
-                type="text"
+                {...register("ammount")}
+                type="number"
                 placeholder="Amount"
-                class="w-full px-3 py-2 font-light focus:outline-none"
+                className="w-full px-3 py-2 font-light focus:outline-none"
               />
-              <span class="bg-gray-100 px-3 flex items-center text-gray-500">
+              <span className="bg-gray-100 px-3 flex items-center text-gray-500">
                 .00
               </span>
             </div>
@@ -29,14 +38,14 @@ const DonationForm = () => {
         <div className="flex gap-3 justify-between w-full mt-5">
           <div className="form-control">
             <input
-              // {...register("image")}
+              {...register("firstName")}
               placeholder="First Name"
               className="w-[350px] bg-white border text-md font-light py-3 px-3 focus:outline-none"
             />
           </div>
           <div className="form-control">
             <input
-              // {...register("image")}
+              {...register("lastName")}
               placeholder="Last Name"
               className="w-[350px] bg-white border text-md font-light py-3 px-3 focus:outline-none"
             />
@@ -46,14 +55,14 @@ const DonationForm = () => {
         <div className="flex gap-3 justify-between w-full">
           <div className="form-control">
             <input
-              // {...register("image")}
+              {...register("email")}
               placeholder="Email"
               className="w-[350px] bg-white border text-md font-light py-3 px-3 focus:outline-none"
             />
           </div>
           <div className="form-control">
             <input
-              // {...register("image")}
+              {...register("number")}
               placeholder="Phone"
               className="w-[350px] bg-white border text-md font-light py-3 px-3 focus:outline-none"
             />
@@ -64,14 +73,14 @@ const DonationForm = () => {
         <div className="flex gap-3 justify-between w-full">
           <div className="form-control">
             <input
-              // {...register("image")}
+              {...register("address")}
               placeholder="Address"
               className="w-[350px] bg-white border text-md font-light py-3 px-3 focus:outline-none"
             />
           </div>
           <div className="form-control">
             <input
-              // {...register("image")}
+              {...register("city")}
               placeholder="City"
               className="w-[350px] bg-white border text-md font-light py-3 px-3 focus:outline-none"
             />
@@ -81,7 +90,7 @@ const DonationForm = () => {
         {/* description */}
         <div className="form-control">
           <textarea
-            // {...register("description")}
+            {...register("description")}
             placeholder="Additional Note"
             className="w-full py-2 pb-10 px-3 bg-white text-md font-light focus:outline-none"
           ></textarea>
