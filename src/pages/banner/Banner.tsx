@@ -36,13 +36,10 @@ const Banner = () => {
               Your Help Turn Into Smiles.
             </p>
             <div className="flex gap-5 justify-center md:mt-3">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                className="bg-[#FFB606] px-6 py-2 mt-6"
-              >
-                {/* You can open the modal using document.getElementById('ID').showModal() method */}
+              <motion.button whileHover={{ scale: 1.1 }}>
+                {/* modal */}
                 <button
-                  className="text-white uppercase font-semibold"
+                  className="bg-[#FFB606] px-6 py-2 mt-6 text-white uppercase font-semibold"
                   onClick={openModal}
                 >
                   Donate Now
@@ -67,7 +64,7 @@ const Banner = () => {
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.1 }}
-                className="bg-[#FFB606] px-6 py-2 mt-6 text-white uppercase font-semibold"
+                className="bg-[#FFB606] px-6 py-2 mt-6 text-[#00715D] uppercase font-semibold"
               >
                 Learn More
               </motion.button>

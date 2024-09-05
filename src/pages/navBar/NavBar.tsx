@@ -18,7 +18,7 @@ const NavBar = () => {
       <div className="flex py-3">
         <div className="navbar-start flex items-center w-[1/4]">
           <Link to="/">
-            <span className="text-4xl px-4 md:px-0 font-bold text-[#00715D]">
+            <span className="text-4xl px-4 md:px-0 font-bold text-[#00715D] uppercase">
               Food<span className="text-[#FFB606]">Sphere</span>
             </span>
           </Link>
@@ -51,12 +51,12 @@ const NavBar = () => {
               {user ? (
                 <button
                   onClick={handleLogout}
-                  className="border-2 border-[#FFB606] px-6 py-2 rounded-lg"
+                  className="border-2 border-[#FFB606] px-6 py-2"
                 >
                   Logout
                 </button>
               ) : (
-                <button className="border-2 border-[#FFB606] px-6 py-2 rounded-lg">
+                <button className="border-2 border-[#FFB606] px-6 py-2">
                   <Link to="login">Login</Link>
                 </button>
               )}

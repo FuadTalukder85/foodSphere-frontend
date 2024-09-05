@@ -20,7 +20,7 @@ const Supply = () => {
         <SupplyCard></SupplyCard>
       </div>
       <div className="flex justify-center items-center mt-11">
-        <button className="bg-[#FFB606] text-[#00715D] md:text-xl font-semibold px-9 py-3 mb-3 md:mb-0 ">
+        <button className="bg-[#FFB606] text-[#00715D] uppercase font-semibold px-6 py-2 mb-3 md:mb-0 ">
           <Link to="/supplies">View all</Link>
         </button>
       </div>

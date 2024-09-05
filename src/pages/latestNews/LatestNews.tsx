@@ -45,8 +45,8 @@ const LatestNews = () => {
               Charity, institutional and modern clothing offices clean extensive
               amounts of textures in an extensive.
             </p>
-            <button className="bg-[#FFB606] text-white px-6 py-2 rounded-lg mt-3 font-bold">
-              Rear More
+            <button className="bg-[#FFB606] text-white px-6 py-2 mt-3 font-semibold uppercase">
+              Read More
             </button>
           </div>
         </div>
@@ -59,8 +59,8 @@ const LatestNews = () => {
               Charity, institutional and modern clothing offices clean extensive
               amounts of textures in an extensive.
             </p>
-            <button className="bg-[#FFB606] text-white px-6 py-2 rounded-lg mt-3 font-bold">
-              Rear More
+            <button className="bg-[#FFB606] text-white px-6 py-2 mt-3 font-semibold uppercase">
+              Read More
             </button>
           </div>
           <motion.img
@@ -111,8 +111,8 @@ const LatestNews = () => {
               Charity, institutional and modern clothing offices clean extensive
               amounts of textures in an extensive.
             </p>
-            <button className="bg-[#FFB606] text-white px-6 py-2 rounded-lg mt-3 font-bold">
-              Rear More
+            <button className="bg-[#FFB606] text-white px-6 py-2 mt-3 font-semibold uppercase">
+              Read More
             </button>
           </div>
         </div>

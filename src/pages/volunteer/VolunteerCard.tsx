@@ -56,7 +56,7 @@ const VolunteerCard = () => {
             </div>
             <motion.button
               whileHover={{ scale: 1.1 }}
-              className="bg-[#FFB606] text-white px-6 py-2 rounded-lg mt-6 font-bold"
+              className="bg-[#FFB606] text-white px-6 py-2 mt-6 font-semibold uppercase"
             >
               Read more
             </motion.button>

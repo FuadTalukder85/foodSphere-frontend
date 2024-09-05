@@ -35,7 +35,7 @@ const AboutUs = () => {
             adipisci voluptatem sed, consectetur! Optio quis alias
             necessitatibus quidem.
           </p>
-          <button className="border-2 border-[#FFB606] px-6 py-2 mt-6 font-bold">
+          <button className="border-2 border-[#FFB606] px-6 py-2 mt-6 font-semibold uppercase">
             Read More
           </button>
         </div>
