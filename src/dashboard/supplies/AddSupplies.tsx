@@ -6,7 +6,7 @@ import { useGetUserQuery } from "../../redux/features/auth/AuthApi";
 
 const AddSupplies = () => {
   const user = useAppSelector(useCurrentUser);
-  console.log(user);
+  // console.log(user);
   const { data, isLoading } = useGetUserQuery(undefined);
 
   const findCurrentUser = (data: any[], currentUser: any) => {
