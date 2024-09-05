@@ -2,7 +2,12 @@ import { useForm, SubmitHandler, FieldValues } from "react-hook-form";
 import { usePostTestimonialsMutation } from "../../redux/features/testimonialsApi/TestimonialsApi";
 
 const DonorTestimonialsForm = () => {
-  const { register, handleSubmit, reset } = useForm();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
   const [postTestimonials] = usePostTestimonialsMutation();
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     try {
@@ -29,10 +34,15 @@ const DonorTestimonialsForm = () => {
                   </span>
                 </label>
                 <input
-                  {...register("name")}
-                  placeholder="name type here"
-                  className="w-full bg-white border py-1 px-3"
+                  {...register("name", { required: true })}
+                  placeholder="Type your name"
+                  className="w-full bg-white border py-1 px-3 focus:outline-none"
                 />
+                {errors.name && (
+                  <small className="text-red-500 text-left">
+                    Please enter Amount
+                  </small>
+                )}
               </div>
               {/* img */}
               <div className="form-control mt-3">
@@ -42,10 +52,15 @@ const DonorTestimonialsForm = () => {
                   </span>
                 </label>
                 <input
-                  {...register("image")}
-                  placeholder="image here"
-                  className="w-full bg-white border py-1 px-3"
+                  {...register("image", { required: true })}
+                  placeholder="Image here"
+                  className="w-full bg-white border py-1 px-3 focus:outline-none"
                 />
+                {errors.image && (
+                  <small className="text-red-500 text-left">
+                    Please enter Image
+                  </small>
+                )}
               </div>
 
               {/* description */}
@@ -56,10 +71,15 @@ const DonorTestimonialsForm = () => {
                   </span>
                 </label>
                 <textarea
-                  {...register("details")}
-                  placeholder="details type here"
-                  className="w-full py-1 px-3 bg-white"
+                  {...register("details", { required: true })}
+                  placeholder="Details type here"
+                  className="w-full py-1 px-3 bg-white focus:outline-none"
                 ></textarea>
+                {errors.details && (
+                  <small className="text-red-500 text-left">
+                    Details enter Amount
+                  </small>
+                )}
               </div>
 
               <div className="form-control mt-6 md:w-[45%] mx-auto">

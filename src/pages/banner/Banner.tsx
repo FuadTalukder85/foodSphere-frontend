@@ -38,10 +38,13 @@ const Banner = () => {
             <div className="flex gap-5 justify-center md:mt-3">
               <motion.button
                 whileHover={{ scale: 1.1 }}
-                className="bg-[#FFB606] px-6 py-2 rounded-lg mt-6 font-bold"
+                className="bg-[#FFB606] px-6 py-2 mt-6"
               >
                 {/* You can open the modal using document.getElementById('ID').showModal() method */}
-                <button className="text-white" onClick={openModal}>
+                <button
+                  className="text-white uppercase font-semibold"
+                  onClick={openModal}
+                >
                   Donate Now
                 </button>
                 <dialog id="my_modal_3" className="modal">
@@ -64,7 +67,7 @@ const Banner = () => {
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.1 }}
-                className="bg-[#FFB606] px-6 py-2 rounded-lg mt-6 font-bold text-white"
+                className="bg-[#FFB606] px-6 py-2 mt-6 text-white uppercase font-semibold"
               >
                 Learn More
               </motion.button>

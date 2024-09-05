@@ -2,7 +2,12 @@ import { useForm, SubmitHandler, FieldValues } from "react-hook-form";
 import { usePostCommentMutation } from "../../redux/features/commentApi/CommentApi";
 
 const CommentForm = () => {
-  const { register, handleSubmit, reset } = useForm();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
   const [postComment] = usePostCommentMutation();
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     try {
@@ -24,26 +29,41 @@ const CommentForm = () => {
             {/* name */}
             <div className="form-control w-full">
               <input
-                {...register("name")}
-                placeholder="type your name here.."
-                className="w-full bg-white border py-1 px-3"
+                {...register("name", { required: true })}
+                placeholder="Type your name here.."
+                className="w-full bg-white border py-1 px-3 focus:outline-none"
               />
+              {errors.name && (
+                <small className="text-red-500 text-left">
+                  Please enter Your name
+                </small>
+              )}
             </div>
             {/* comment */}
             <div className="form-control w-full mt-5 md:mt-0">
               <input
-                {...register("comment")}
-                placeholder="type your comment here.."
-                className="w-full bg-white border py-1 px-3"
+                {...register("comment", { required: true })}
+                placeholder="Type your comment here.."
+                className="w-full bg-white border py-1 px-3 focus:outline-none"
               />
+              {errors.comment && (
+                <small className="text-red-500 text-left">
+                  Please enter Comment
+                </small>
+              )}
             </div>
             {/* img */}
             <div className="form-control w-full mt-5 md:mt-0">
               <input
-                {...register("image")}
-                placeholder="your image here.."
-                className="w-full bg-white border py-1 px-3"
+                {...register("image", { required: true })}
+                placeholder="Image here"
+                className="w-full bg-white border py-1 px-3 focus:outline-none"
               />
+              {errors.image && (
+                <small className="text-red-500 text-left">
+                  Please enter Image
+                </small>
+              )}
             </div>
 
             <div className="form-control mt-5 md:mt-0">

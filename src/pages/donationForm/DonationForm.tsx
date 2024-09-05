@@ -1,7 +1,12 @@
 import { useForm, SubmitHandler, FieldValues } from "react-hook-form";
 import { usePostDonateMutation } from "../../redux/features/donateApi/DonateApi";
 const DonationForm = () => {
-  const { register, handleSubmit, reset } = useForm();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
   const [postDonate] = usePostDonateMutation();
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     try {
@@ -23,7 +28,7 @@ const DonationForm = () => {
                 $
               </span>
               <input
-                {...register("ammount")}
+                {...register("ammount", { required: true })}
                 type="number"
                 placeholder="Amount"
                 className="w-full px-3 py-2 font-light focus:outline-none"
@@ -32,40 +37,65 @@ const DonationForm = () => {
                 .00
               </span>
             </div>
+            {errors.ammount && (
+              <small className="text-red-500 text-left">
+                Please enter Amount
+              </small>
+            )}
           </div>
         </div>
         {/* name */}
         <div className="flex gap-3 justify-between w-full mt-5">
           <div className="form-control">
             <input
-              {...register("firstName")}
+              {...register("firstName", { required: true })}
               placeholder="First Name"
               className="w-[350px] bg-white border text-md font-light py-3 px-3 focus:outline-none"
             />
+            {errors.firstName && (
+              <small className="text-red-500 text-left">
+                Please enter your First Name
+              </small>
+            )}
           </div>
           <div className="form-control">
             <input
-              {...register("lastName")}
+              {...register("lastName", { required: true })}
               placeholder="Last Name"
               className="w-[350px] bg-white border text-md font-light py-3 px-3 focus:outline-none"
             />
+            {errors.lastName && (
+              <small className="text-red-500 text-left">
+                Please enter your Last Name
+              </small>
+            )}
           </div>
         </div>
         {/* email & phone */}
         <div className="flex gap-3 justify-between w-full">
           <div className="form-control">
             <input
-              {...register("email")}
+              {...register("email", { required: true })}
               placeholder="Email"
               className="w-[350px] bg-white border text-md font-light py-3 px-3 focus:outline-none"
             />
+            {errors.email && (
+              <small className="text-red-500 text-left">
+                Please enter your Email
+              </small>
+            )}
           </div>
           <div className="form-control">
             <input
-              {...register("number")}
+              {...register("number", { required: true })}
               placeholder="Phone"
               className="w-[350px] bg-white border text-md font-light py-3 px-3 focus:outline-none"
             />
+            {errors.number && (
+              <small className="text-red-500 text-left">
+                Please enter your Number
+              </small>
+            )}
           </div>
         </div>
 
@@ -73,27 +103,42 @@ const DonationForm = () => {
         <div className="flex gap-3 justify-between w-full">
           <div className="form-control">
             <input
-              {...register("address")}
+              {...register("address", { required: true })}
               placeholder="Address"
               className="w-[350px] bg-white border text-md font-light py-3 px-3 focus:outline-none"
             />
+            {errors.address && (
+              <small className="text-red-500 text-left">
+                Please enter your Address
+              </small>
+            )}
           </div>
           <div className="form-control">
             <input
-              {...register("city")}
+              {...register("city", { required: true })}
               placeholder="City"
               className="w-[350px] bg-white border text-md font-light py-3 px-3 focus:outline-none"
             />
+            {errors.city && (
+              <small className="text-red-500 text-left">
+                Please enter your City
+              </small>
+            )}
           </div>
         </div>
 
         {/* description */}
         <div className="form-control">
           <textarea
-            {...register("description")}
+            {...register("description", { required: true })}
             placeholder="Additional Note"
-            className="w-full py-2 pb-10 px-3 bg-white text-md font-light focus:outline-none"
+            className="w-full py-2 pb-10 px-3 bg-white text-md font-light border focus:outline-none"
           ></textarea>
+          {errors.description && (
+            <small className="text-red-500 text-left">
+              Please enter your Description
+            </small>
+          )}
         </div>
 
         <div className="form-control mt-6 w-[35%] mx-auto">

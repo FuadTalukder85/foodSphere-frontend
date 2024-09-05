@@ -26,7 +26,12 @@ const AddSupplies = () => {
     }
   }
 
-  const { register, handleSubmit, reset } = useForm();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
   const [postSupply] = usePostSupplyMutation();
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     const postSupplies = { username, user, ...data };
@@ -59,10 +64,15 @@ const AddSupplies = () => {
                   </span>
                 </label>
                 <input
-                  {...register("image")}
+                  {...register("image", { required: true })}
                   placeholder="image here"
-                  className="w-full bg-white border py-1 px-3"
+                  className="w-full bg-white border py-1 px-3 focus:outline-none"
                 />
+                {errors.image && (
+                  <small className="text-red-500 text-left">
+                    Image is required
+                  </small>
+                )}
               </div>
               {/* category */}
               <div className="form-control">
@@ -72,10 +82,15 @@ const AddSupplies = () => {
                   </span>
                 </label>
                 <input
-                  {...register("category")}
-                  placeholder="category type here"
-                  className="w-full bg-white border py-1 px-3"
+                  {...register("category", { required: true })}
+                  placeholder="Category type here"
+                  className="w-full bg-white border py-1 px-3 focus:outline-none"
                 />
+                {errors.category && (
+                  <small className="text-red-500 text-left">
+                    Category is required
+                  </small>
+                )}
               </div>
               {/* title */}
               <div className="form-control">
@@ -85,10 +100,15 @@ const AddSupplies = () => {
                   </span>
                 </label>
                 <input
-                  {...register("title")}
-                  placeholder="title type here"
-                  className="w-full bg-white border py-1 px-3"
+                  {...register("title", { required: true })}
+                  placeholder="Title type here"
+                  className="w-full bg-white border py-1 px-3 focus:outline-none"
                 />
+                {errors.title && (
+                  <small className="text-red-500 text-left">
+                    Title is required
+                  </small>
+                )}
               </div>
               {/* Quantity */}
               <div className="form-control">
@@ -101,9 +121,14 @@ const AddSupplies = () => {
                   {...register("quantity", { required: true })}
                   type="number"
                   min="1"
-                  placeholder="quantity type here"
-                  className="w-full bg-white border py-1 px-3"
+                  placeholder="Quantity type here"
+                  className="w-full bg-white border py-1 px-3 focus:outline-none"
                 />
+                {errors.quantity && (
+                  <small className="text-red-500 text-left">
+                    Quantity is required
+                  </small>
+                )}
               </div>
 
               {/* description */}
@@ -114,10 +139,15 @@ const AddSupplies = () => {
                   </span>
                 </label>
                 <textarea
-                  {...register("description")}
-                  placeholder="description type here"
-                  className="w-full py-1 px-3 bg-white"
+                  {...register("description", { required: true })}
+                  placeholder="Description type here"
+                  className="w-full py-1 px-3 bg-white focus:outline-none"
                 ></textarea>
+                {errors.description && (
+                  <small className="text-red-500 text-left">
+                    Description is required
+                  </small>
+                )}
               </div>
 
               <div className="form-control mt-6 w-[35%] mx-auto">
