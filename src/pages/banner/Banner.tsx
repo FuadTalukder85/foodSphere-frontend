@@ -39,7 +39,7 @@ const Banner = () => {
               <motion.button whileHover={{ scale: 1.1 }}>
                 {/* modal */}
                 <button
-                  className="bg-[#FFB606] px-6 py-2 mt-6 text-white uppercase font-semibold"
+                  className="bg-[#FFB606] px-6 py-2 mt-6 text-white uppercase font-semibold focus:outline-none"
                   onClick={openModal}
                 >
                   Donate Now

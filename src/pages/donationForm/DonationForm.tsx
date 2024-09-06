@@ -144,7 +144,7 @@ const DonationForm = () => {
         <div className="form-control mt-6 w-[35%] mx-auto">
           <button
             type="submit"
-            className="bg-[#FFB606] hover:bg-[#00715D] transition-all text-white font-bold rounded py-2 px-5"
+            className="bg-[#FFB606] hover:bg-[#00715D] transition-all text-white font-semibold uppercase py-2 px-5"
           >
             Donate Now
           </button>

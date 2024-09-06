@@ -85,7 +85,7 @@ const DonorTestimonialsForm = () => {
               <div className="form-control mt-6 md:w-[45%] mx-auto">
                 <button
                   type="submit"
-                  className="bg-[#FFB606] hover:bg-[#00715D] transition-all text-white tracking-widest font-bold rounded py-2 px-5"
+                  className="bg-[#FFB606] hover:bg-[#00715D] transition-all text-white font-semibold uppercase py-2 px-5"
                 >
                   Add Testimonials
                 </button>

@@ -6,7 +6,12 @@ import { MdEmail } from "react-icons/md";
 import { IoCall } from "react-icons/io5";
 
 const VolunteerForm = () => {
-  const { register, handleSubmit, reset } = useForm();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
 
   const [postVolunteer] = usePostVolunteerMutation();
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
@@ -67,10 +72,15 @@ const VolunteerForm = () => {
                       </span>
                     </label>
                     <input
-                      {...register("firstName")}
+                      {...register("firstName", { required: true })}
                       placeholder="Enter first name here.."
-                      className="w-full bg-white border py-1 px-3"
+                      className="w-full px-3 py-2 font-light focus:outline-none"
                     />
+                    {errors.firstName && (
+                      <small className="text-red-500 text-left">
+                        First name is required
+                      </small>
+                    )}
                   </div>
                   {/* last name */}
                   <div className="form-control mt-3 w-full">
@@ -80,10 +90,15 @@ const VolunteerForm = () => {
                       </span>
                     </label>
                     <input
-                      {...register("lastName")}
+                      {...register("lastName", { required: true })}
                       placeholder="Enter last name here.."
-                      className="w-full bg-white border py-1 px-3"
+                      className="w-full px-3 py-2 font-light focus:outline-none"
                     />
+                    {errors.lastName && (
+                      <small className="text-red-500 text-left">
+                        Last name is required
+                      </small>
+                    )}
                   </div>
                 </div>
                 {/* img */}
@@ -94,10 +109,15 @@ const VolunteerForm = () => {
                     </span>
                   </label>
                   <input
-                    {...register("image")}
+                    {...register("image", { required: true })}
                     placeholder="image here.."
-                    className="w-full bg-white border py-1 px-3"
+                    className="w-full px-3 py-2 font-light focus:outline-none"
                   />
+                  {errors.image && (
+                    <small className="text-red-500 text-left">
+                      Image is required
+                    </small>
+                  )}
                 </div>
                 {/* Phone number */}
                 <div className="form-control mt-3">
@@ -107,10 +127,15 @@ const VolunteerForm = () => {
                     </span>
                   </label>
                   <input
-                    {...register("phoneNumber")}
+                    {...register("phoneNumber", { required: true })}
                     placeholder="Enter phone number here.."
-                    className="w-full bg-white border py-1 px-3"
+                    className="w-full px-3 py-2 font-light focus:outline-none"
                   />
+                  {errors.phoneNumber && (
+                    <small className="text-red-500 text-left">
+                      Number is required
+                    </small>
+                  )}
                 </div>
                 {/* Email */}
                 <div className="form-control mt-3">
@@ -120,10 +145,15 @@ const VolunteerForm = () => {
                     </span>
                   </label>
                   <input
-                    {...register("email")}
+                    {...register("email", { required: true })}
                     placeholder="Enter email address here.."
-                    className="w-full bg-white border py-1 px-3"
+                    className="w-full px-3 py-2 font-light focus:outline-none"
                   />
+                  {errors.email && (
+                    <small className="text-red-500 text-left">
+                      Email is required
+                    </small>
+                  )}
                 </div>
                 {/* Address */}
                 <div className="form-control mt-3">
@@ -133,10 +163,15 @@ const VolunteerForm = () => {
                     </span>
                   </label>
                   <input
-                    {...register("address")}
+                    {...register("address", { required: true })}
                     placeholder="Enter address here.."
-                    className="w-full bg-white border py-1 px-3"
+                    className="w-full px-3 py-2 font-light focus:outline-none"
                   />
+                  {errors.address && (
+                    <small className="text-red-500 text-left">
+                      Address is required
+                    </small>
+                  )}
                 </div>
 
                 {/* description */}
@@ -147,16 +182,21 @@ const VolunteerForm = () => {
                     </span>
                   </label>
                   <textarea
-                    {...register("description")}
+                    {...register("description", { required: true })}
                     placeholder="description type here"
                     className="w-full py-1 px-3 bg-white"
                   ></textarea>
+                  {errors.description && (
+                    <small className="text-red-500 text-left">
+                      Description is required
+                    </small>
+                  )}
                 </div>
 
                 <div className="form-control mt-6 w-[35%] mx-auto">
                   <button
                     type="submit"
-                    className="bg-[#FFB606] hover:bg-[#00715D] transition-all text-white tracking-widest font-bold rounded py-2 px-5"
+                    className="bg-[#FFB606] hover:bg-[#00715D] transition-all text-white font-semibold uppercase py-2 px-5"
                   >
                     Submit
                   </button>
