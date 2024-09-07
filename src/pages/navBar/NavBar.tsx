@@ -41,9 +41,9 @@ const NavBar = () => {
             <li className="text-[#00715D] font-bold">
               <Link to="about-us">About Us</Link>
             </li>
-            <li className="text-[#00715D] font-bold">
+            {/* <li className="text-[#00715D] font-bold">
               <Link to="leaderboard">Leaderboard</Link>
-            </li>
+            </li> */}
             <li className="text-[#00715D] font-bold">
               {user ? <Link to="dashboard">Dashboard</Link> : ""}
             </li>
@@ -98,9 +98,9 @@ const NavBar = () => {
             <li className="text-[#00715D] font-bold">
               <Link to="about-us">About Us</Link>
             </li>
-            <li className="text-[#00715D] font-bold">
+            {/* <li className="text-[#00715D] font-bold">
               <Link to="leaderboard">Leaderboard</Link>
-            </li>
+            </li> */}
             <li className="text-[#00715D] font-bold">
               {user ? <Link to="dashboard">Dashboard</Link> : ""}
             </li>

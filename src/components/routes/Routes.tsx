@@ -16,7 +16,7 @@ import DonorTestimonialsForm from "../../dashboard/donorTestimonials/DonorTestim
 import DonorTestimonials from "../../dashboard/donorTestimonials/DonorTestimonials";
 import Community from "../../pages/community/Community";
 import VolunteerForm from "../../pages/volunteer/VolunteerForm";
-import LeatherBoard from "../../pages/leatherboard/LeatherBoard";
+// import LeatherBoard from "../../pages/leatherboard/LeatherBoard";
 
 export const router = createBrowserRouter([
   {
@@ -47,10 +47,10 @@ export const router = createBrowserRouter([
         path: "about-us",
         element: <AboutUsPage></AboutUsPage>,
       },
-      {
-        path: "leaderboard",
-        element: <LeatherBoard></LeatherBoard>,
-      },
+      // {
+      //   path: "leaderboard",
+      //   element: <LeatherBoard></LeatherBoard>,
+      // },
       {
         path: "login",
         element: <Login></Login>,
