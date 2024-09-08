@@ -13,7 +13,7 @@ const SupplyCard = () => {
       {data?.slice(0, 8).map((supplyData: any) => (
         <div
           key={supplyData._id}
-          className="col-span-6 md:col-span-3 mx-auto p-1 md:p-0 shadow-xl"
+          className="col-span-6 md:col-span-3 mx-auto p-1 md:p-7 shadow-xl"
         >
           <motion.img
             whileHover={{
