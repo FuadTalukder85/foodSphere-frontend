@@ -51,7 +51,7 @@ const SupplyCard = () => {
               </div>
               <div className="flex justify-center items-center mt-5">
                 <button className="border-2 border-[#FFB606] text-[#00715D] font-semibold px-3 py-1 rounded-md mb-3 md:mb-0">
-                  <Link to={`${supplyData._id}`}>View Detail</Link>
+                  <Link to={`supplies/${supplyData._id}`}>View Detail</Link>
                 </button>
               </div>
             </div>
