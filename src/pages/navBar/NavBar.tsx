@@ -18,7 +18,7 @@ const NavBar = () => {
       <div className="flex py-3">
         <div className="navbar-start flex items-center w-[1/4]">
           <Link to="/">
-            <span className="text-4xl px-4 md:px-0 font-bold text-[#00715D] uppercase">
+            <span className="text-3xl md:text-4xl px-4 md:px-0 font-bold text-[#00715D] uppercase">
               Food<span className="text-[#FFB606]">Sphere</span>
             </span>
           </Link>
@@ -81,7 +81,7 @@ const NavBar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-16 z-[1] p-2 shadow bg-slate-200 w-36"
+            className="menu menu-sm dropdown-content mt-16 z-[1] p-2 shadow bg-slate-200 w-40"
           >
             <li className="text-[#00715D] font-bold">
               <Link to="/">Home</Link>

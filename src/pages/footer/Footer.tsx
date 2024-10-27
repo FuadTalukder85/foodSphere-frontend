@@ -26,7 +26,7 @@ const Footer = () => {
                 Food<span className="text-[#FFB606]">Sphere</span>
               </span>
             </p>
-            <p className="max-w-[40ch] mt-3 text-lg text-white">
+            <p className="max-w-[34ch] mt-3 text-lg text-white">
               Nulla ultricies justo sit amet ante efficitur, eget pharetra augue
               efficitur. Vestibulum viverra, dolor sit amet ultricies.
             </p>
@@ -55,7 +55,7 @@ const Footer = () => {
               </div>
             </dialog>
           </aside>
-          <nav className="col-span-5 md:col-span-2 text-white">
+          <nav className="col-span-3 md:col-span-2 text-white">
             <h6 className="font-bold text-2xl text-[#FFB606]">Services</h6>
             <a className="link link-hover text-lg">Donate</a>
             <a className="link link-hover text-lg">Sponsor</a>
@@ -63,7 +63,7 @@ const Footer = () => {
             <a className="link link-hover text-lg">Volunteer</a>
             <a className="link link-hover text-lg">Partner</a>
           </nav>
-          <nav className="col-span-7 md:col-span-3 text-white">
+          <nav className="col-span-9 md:col-span-3 text-white">
             <h6 className="font-bold text-2xl text-[#FFB606]">Non profit</h6>
             <a className="link link-hover text-lg">Differently Abled Kids</a>
             <a className="link link-hover text-lg">Help Child Cancer</a>

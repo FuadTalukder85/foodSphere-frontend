@@ -12,7 +12,7 @@ const Gallery = () => {
   return (
     <div className="mt-7 md:mt-28">
       <div>
-        <h1 className="text-4xl text-[#00715D] font-semibold text-center">
+        <h1 className="text-3xl md:text-4xl text-[#00715D] font-semibold text-center">
           OUR PHOTO <span className="text-[#FFB606]">GALLERY</span>
         </h1>
         <p className="text-center mt-2 font-semibold text-[#00715D]">
@@ -20,7 +20,7 @@ const Gallery = () => {
           those who need it!
         </p>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-7 md:mt-14">
+      <div className="grid grid-cols-2 md:grid-cols-4 p-2 md:p-2 gap-2 md:gap-5 mt-7 md:mt-14">
         <div className="overflow-hidden">
           <motion.img
             whileHover={{
